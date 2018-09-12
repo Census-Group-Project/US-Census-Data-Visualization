@@ -2,7 +2,6 @@
 body {
     margin:0;
     padding:0;
-    background:url(../images/United-State-Artistic-Background.jpg);
     background-size:cover;
 }
 .search {
@@ -105,3 +104,8 @@ body {
 /* Start Default Pie Chart */
 
 /* End Default Pie Chart */
+
+/* Custom Class for Hiding */
+.hidden {
+    display: none;
+}
