@@ -2,7 +2,7 @@
 body {
     margin:0;
     padding:0;
-    background:url(./assets/images/United-State-Artistic-Background.jpg);
+    background:url(../images/United-State-Artistic-Background.jpg);
     background-size:cover;
 }
 .search {
