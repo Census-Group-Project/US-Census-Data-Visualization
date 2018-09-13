@@ -113,11 +113,11 @@ body {
 }
 .chart {
   position: absolute;
-  width: 450px;
-  height: 450px;
+  width: 350px;
+  height: 350px;
   top: 50%;
   left: 50%;
-  margin: -225px 0 0 -225px;
+  margin: -225px 0 0 -175px;
 }
 .pieTip {
   position: absolute;
@@ -158,6 +158,11 @@ body {
 /* End Default Pie Chart */
 
 /* Start Default Bar Graph */
+@media only screen and (max-width: 600px) {
+    .bar-graph {
+        padding-top: 100px;
+    }
+}
 @keyframes bar-fill {
     0% {
       width: 0;
