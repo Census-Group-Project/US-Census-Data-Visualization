@@ -20,7 +20,8 @@ app.use(bodyParser.json());
 // Static directory
 app.use(express.static("app/public"));
 
-// Sets up server access to routing
+// Sets up server access to API and HTML routing
+require("./app/routes/html-routes.js")(app);
 require("./app/routes/api-routes.js")(app);
 
 db.sequelize.sync().then(function () {
