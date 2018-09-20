@@ -1,0 +1,30 @@
+{
+  "name": "US-Census-Data-Visualization",
+  "version": "1.0.0",
+  "description": "This web app allows users to search for any American city and view a data visualization of that city's demographics based on statistics from the United States Census Bureau.",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mysql": "^2.16.0",
+    "mysql2": "^1.6.1",
+    "path": "^0.12.7",
+    "sequelize": "^4.38.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Census-Group-Project/US-Census-Data-Visualization.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Census-Group-Project/US-Census-Data-Visualization/issues"
+  },
+  "homepage": "https://github.com/Census-Group-Project/US-Census-Data-Visualization#readme"
+}
