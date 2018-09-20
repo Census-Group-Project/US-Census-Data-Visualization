@@ -76,9 +76,11 @@
                     <div id="wrap">
                         <div class="center">
                             <div id="search">
-                                <span class="ac ac-hidden"></span>
-                                <input type="text" id="city-search" placeholder="Search any American city">
-                                <button id="search-btn">Search</button>
+                                <form group="search" method="POST">
+                                    <span class="ac ac-hidden"></span>
+                                    <input type="text" id="city-search" placeholder="Search any American city.">
+                                    <button id="search-btn">Search</button>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -91,7 +93,11 @@
     <section class="bg-primary" id="about">
         <div class="container">
             <div class="row">
-                <h2 class="section-heading text-white">We've got what you need!</h2>
+
+                <!-- Test div for data dump -- TO BE REMOVED BEFORE DEPLOYMENT! -->
+                <!-- <div id="test-data-dump"></div> -->
+
+                <h2 class="section-heading text-white" id="test-data-dump">We've got what you need!</h2>
                 <hr class="light my-4">
                 <p class="text-faded mb-4">Start Bootstrap has everything you need to get your new website up and
                     running in no time! All of the templates and themes on Start Bootstrap are open source, free to
@@ -401,6 +407,18 @@
         </div>
     </section>
 
+    <!-- OLD Search Bar ... -->
+    <!-- <div class="row">
+        <div class="search">
+            <form class="search" method="POST">
+                <input type="text" id="city-search" placeholder="Search Any American City">
+                <button id="search-btn">
+                    <div class="icon"></div>
+                </button>
+            </form>
+        </div>
+    </div> -->
+
     <!-- Bootstrap core JavaScript -->
     <script src="../bootstrap/vendor/jquery/jquery.min.js"></script>
     <script src="../bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -410,18 +428,16 @@
     <script src="../bootstrap/vendor/scrollreveal/scrollreveal.min.js"></script>
     <script src="../bootstrap/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
-    <!-- Custom scripts for this template -->
-    <script src="../bootstrap/js/creative.min.js"></script>
-
     <!-- CDN for Chart.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js" type="text/javascript"></script>
     <script src="../js/custom.js" type="text/javascript"></script>
     <script src="../js/app.js" type="text/javascript"></script>
-    </div>
 
+    <!-- Custom scripts for this template -->
+    <script src="../bootstrap/js/creative.min.js"></script>
+
+    <!-- Custom script to handle search event to API  -->
     <script src="../js/API-event-handling.js" type="text/javascript"></script>
-
-    <div id="test-data-dump"></div>
 
 </body>
 
