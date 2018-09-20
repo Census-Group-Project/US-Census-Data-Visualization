@@ -2,7 +2,11 @@
 const Sequelize = require("sequelize");
 
 // Creates mySQL connection using Sequelize, the empty string in the third argument spot is our password.
-const sequelize = new Sequelize("census1_db", "root", "PASSWORD", {
+//<<<<<<< tybopp
+//const sequelize = new Sequelize("census1_db", "root", "PASSWORD", {
+//=======
+var sequelize = new Sequelize("census_db", "root", "password", {
+//>>>>>>> master
   host: "localhost",
   port: 3306,
   dialect: "mysql",

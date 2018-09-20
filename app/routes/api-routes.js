@@ -18,7 +18,11 @@ module.exports = function (app) {
       // Pass the search params to sequelize to perform the search.
       Census.findOne({
         where: {
-          Areaname: searchParams
+//<<<<<<< tybopp
+          //Areaname: searchParams
+//=======
+          areaname: req.params.city
+//>>>>>>> master
         }
       }).then(function (results) {
         return res.json(results);
@@ -26,7 +30,7 @@ module.exports = function (app) {
     } else {
       Census.findOne({
         where: {
-          Areaname: 'UNITED STATES'
+          areaname: 'UNITED STATES'
         }
       }).then(function (results) {
         return res.json(results);
