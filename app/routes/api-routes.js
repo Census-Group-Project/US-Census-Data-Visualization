@@ -8,7 +8,7 @@ module.exports = function (app) {
     if (req.params.city) {
       Census.findOne({
         where: {
-          Areaname: req.params.city
+          areaname: req.params.city
         }
       }).then(function (results) {
         return res.json(results);
@@ -16,7 +16,7 @@ module.exports = function (app) {
     } else {
       Census.findOne({
         where: {
-          Areaname: 'UNITED STATES'
+          areaname: 'UNITED STATES'
         }
       }).then(function (results) {
         return res.json(results);
