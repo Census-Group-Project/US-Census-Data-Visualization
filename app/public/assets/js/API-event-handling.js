@@ -10,27 +10,26 @@ $("#search-btn").on("click", function () {
     .val()
     .trim();
 
-  // Using a RegEx Pattern to remove spaces from searchedCharacter
+  // Using a RegEx Pattern to remove spaces from searchedCity
   // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
   searchedCity = searchedCity.replace(/\s+/g, "").toLowerCase();
 
   // run an AJAX GET-request for our servers api,
-  // including the user's character in the url
+  // including the user's search criterion in the url
   $.get("/api/" + searchedCity, function (data) {
     // log the data to our console
     console.log(data);
-    // empty to well-section before adding new content
+    // empty to test-data-dump section before adding new content
     $("#test-data-dump").empty();
-    // if the data is not there, then return an error message
+    // if the data is not found in the DB, then return the following error message on the page:
     if (!data) {
-      $("#test-data-dump").append("<h2> No data found. </h2>");
+      $("#test-data-dump").append("<h2> Hmmm... No data was returned from database. </h2>");
     } else {
-      // otherwise
-      // append the character name
+      // otherwise, append the search result data to the test-data-dump div at the bottom of the page:
       $("#test-data-dump").append("<h2>" + data.Areaname + "</h2>");
-      // the role
+      // Example Data Set #1
       $("#test-data-dump").append("<h3>Data Set #1: " + data.STCOU + "</h3>");
-      // the age
+      // Example Data Set #2
       $("#test-data-dump").append("<h3>Data Set #2: " + data.PST100209D + "</h3>");
     }
   });
