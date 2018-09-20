@@ -1,6 +1,7 @@
 // Dependencies
 const express = require("express");
 const bodyParser = require("body-parser");
+const path = require("path");
 
 // Sets up the Express App
 const app = express();
@@ -18,9 +19,10 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 // Static directory
-app.use(express.static("app/public"));
+app.use(express.static("app/public/assets"));
 
-// Sets up server access to routing
+// Sets up server access to API and HTML routing
+require("./app/routes/html-routes.js")(app);
 require("./app/routes/api-routes.js")(app);
 
 db.sequelize.sync().then(function () {
