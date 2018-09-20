@@ -14,7 +14,7 @@ module.exports = function (app) {
       searchParams = searchParams.split("&");
       // 3. Re-define the search variable as the two strings connected with a ", " in between city and state strings in order to pass the exact format required for the database search.
       searchParams = searchParams[0] + ", " + searchParams[1];
-      
+
       // Pass the search params to sequelize to perform the search.
       Census.findOne({
         where: {
