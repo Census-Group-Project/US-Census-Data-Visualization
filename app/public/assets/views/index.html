@@ -68,19 +68,23 @@
                     </h1>
                     <hr>
                 </div>
+            </div>
+
+            <!-- Start Search Bar -->
+            <div class="row">
                 <div class="col-lg-10 mx-auto">
-                    <h1 class="text-uppercase">
-                        <strong></strong>
-                    </h1>
-                    <hr>
-                </div>
-                <div class="col-lg-10 mx-auto">
-                    <h1 class="text-uppercase">
-                        <strong></strong>
-                    </h1>
-                    <hr>
+                    <div id="wrap">
+                        <div class="center">
+                            <div id="search">
+                                <span class="ac ac-hidden"></span>
+                                <input type="text" id="city-search" placeholder="Search any American city">
+                                <button id="search-btn">Search</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <!-- End Search Bar -->
         </div>
     </header>
 
@@ -145,80 +149,81 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                        <div id="bar-chart">
-                                <div class="graph">
-                                  <ul class="x-axis">
-                                    <li><span>2010</span></li>
-                                    <li><span>2012</span></li>
-                                    <li><span>2013</span></li>
-                                    <li><span>2014</span></li>
-                                    <li><span>2015</span></li>
-                                  </ul>
-                                  <ul class="y-axis">
-                                    <li><span>20</span></li>
-                                    <li><span>15</span></li>
-                                    <li><span>10</span></li>
-                                    <li><span>5</span></li>
-                                    <li><span>0</span></li>
-                                  </ul>
-                                  <div class="bars">
-                                    <div class="bar-group">
-                                      <div class="bar bar-1 stat-1" style="height: 51%;">      
+                    <div id="bar-chart">
+                        <div class="graph">
+                            <ul class="x-axis">
+                                <li><span>2010</span></li>
+                                <li><span>2012</span></li>
+                                <li><span>2013</span></li>
+                                <li><span>2014</span></li>
+                                <li><span>2015</span></li>
+                            </ul>
+                            <ul class="y-axis">
+                                <li><span>20</span></li>
+                                <li><span>15</span></li>
+                                <li><span>10</span></li>
+                                <li><span>5</span></li>
+                                <li><span>0</span></li>
+                            </ul>
+                            <div class="bars">
+                                <div class="bar-group">
+                                    <div class="bar bar-1 stat-1" style="height: 51%;">
                                         <span>4080</span>
-                                      </div>
-                                      <div class="bar bar-2 stat-2" style="height: 71%;">
+                                    </div>
+                                    <div class="bar bar-2 stat-2" style="height: 71%;">
                                         <span>5680</span>
-                                      </div>
-                                      <div class="bar bar-3 stat-3" style="height: 13%;">
+                                    </div>
+                                    <div class="bar bar-3 stat-3" style="height: 13%;">
                                         <span>1040</span>
-                                      </div>
                                     </div>
-                                    <div class="bar-group">
-                                      <div class="bar bar-4 stat-1" style="height: 76%;">
-                                        <span>6080</span>
-                                      </div>
-                                      <div class="bar bar-5 stat-2" style="height: 86%;">
-                                        <span>6880</span>
-                                      </div>
-                                      <div class="bar bar-6 stat-3" style="height: 22%;">
-                                        <span>1760</span>
-                                      </div>
-                                    </div>
-                                    <div class="bar-group">
-                                      <div class="bar bar-7 stat-1" style="height: 78%;">
-                                        <span>6240</span>
-                                      </div>
-                                      <div class="bar bar-8 stat-2" style="height: 72%;">
-                                        <span>5760</span>
-                                      </div>
-                                      <div class="bar bar-9 stat-3" style="height: 36%;">
-                                        <span>2880</span>
-                                      </div></div>
-                                    <div class="bar-group">
-                                      <div class="bar bar-10 stat-1" style="height: 44%;">
-                                        <span>3520</span>
-                                      </div>
-                                      <div class="bar bar-11 stat-2" style="height: 64%;">
-                                        <span>5120</span>
-                                      </div>
-                                      <div class="bar bar-12 stat-3" style="height: 59%">
-                                        <span>4720</span>
-                                      </div>
-                                    </div>
-                                    <div class="bar-group">
-                                      <div class="bar bar-13 stat-1" style="height: 28%;">
-                                        <span>2240</span>
-                                      </div>
-                                      <div class="bar bar-14 stat-2" style="height: 33%;">
-                                        <span>2640</span>
-                                      </div>
-                                      <div class="bar bar-15 stat-3" style="height: 94%;">
-                                        <span>7520</span>
-                                      </div>
-                                    </div>
-                                  </div>
                                 </div>
-                              </div>
+                                <div class="bar-group">
+                                    <div class="bar bar-4 stat-1" style="height: 76%;">
+                                        <span>6080</span>
+                                    </div>
+                                    <div class="bar bar-5 stat-2" style="height: 86%;">
+                                        <span>6880</span>
+                                    </div>
+                                    <div class="bar bar-6 stat-3" style="height: 22%;">
+                                        <span>1760</span>
+                                    </div>
+                                </div>
+                                <div class="bar-group">
+                                    <div class="bar bar-7 stat-1" style="height: 78%;">
+                                        <span>6240</span>
+                                    </div>
+                                    <div class="bar bar-8 stat-2" style="height: 72%;">
+                                        <span>5760</span>
+                                    </div>
+                                    <div class="bar bar-9 stat-3" style="height: 36%;">
+                                        <span>2880</span>
+                                    </div>
+                                </div>
+                                <div class="bar-group">
+                                    <div class="bar bar-10 stat-1" style="height: 44%;">
+                                        <span>3520</span>
+                                    </div>
+                                    <div class="bar bar-11 stat-2" style="height: 64%;">
+                                        <span>5120</span>
+                                    </div>
+                                    <div class="bar bar-12 stat-3" style="height: 59%">
+                                        <span>4720</span>
+                                    </div>
+                                </div>
+                                <div class="bar-group">
+                                    <div class="bar bar-13 stat-1" style="height: 28%;">
+                                        <span>2240</span>
+                                    </div>
+                                    <div class="bar bar-14 stat-2" style="height: 33%;">
+                                        <span>2640</span>
+                                    </div>
+                                    <div class="bar bar-15 stat-3" style="height: 94%;">
+                                        <span>7520</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <h2 class="section-heading">At Your Service</h2>
                     <hr class="my-4">
@@ -229,7 +234,7 @@
         <div class="container">
             <div class="row">
 
-                    <canvas id="myChart" width="400" height="400"></canvas>
+                <canvas id="myChart" width="400" height="400"></canvas>
 
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box mt-5 mx-auto">
@@ -404,25 +409,17 @@
 
     <!-- Custom scripts for this template -->
     <script src="../bootstrap/js/creative.min.js"></script>
-    <!-- Start Container -->
-    <!-- Search Bar -->
-    <div class="row">
-        <div class="search">
-            <form class="search" method="POST">
-            <input type="text" id="city-search" placeholder="Search Any American City">
-            <button id="search-btn"><div class="icon"></div></button>
-            </form>
-        </div>
-        <!-- CDN for Chart.js -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js" type="text/javascript"></script>
-        <script src="../js/custom.js" type="text/javascript"></script>
-        <script src="../js/app.js" type="text/javascript"></script>
+
+    <!-- CDN for Chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js" type="text/javascript"></script>
+    <script src="../js/custom.js" type="text/javascript"></script>
+    <script src="../js/app.js" type="text/javascript"></script>
     </div>
 
     <script src="../js/API-event-handling.js" type="text/javascript"></script>
 
     <div id="test-data-dump"></div>
-    
+
 </body>
 
 </html>
