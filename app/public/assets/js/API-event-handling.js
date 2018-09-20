@@ -1,11 +1,11 @@
 // Code here handles queries for specific city census data in the database
 // In this case, the user submits a city name. That city name is passed as a
-// URL parameter. Our server then performs the search to grab that character from the Database.
+// URL parameter in our AJAX GET call. Our server then performs the search to grab that city from the Database.
 
 // when user hits the city-search-btn
 $("#search-btn").on("click", function () {
   event.preventDefault();
-  // save the character they typed into the character-search input
+  // save the search criterion they typed into the city-search bar.
   let searchedCity = $("#city-search")
     .val()
     .trim();
