@@ -19,9 +19,9 @@ module.exports = function (app) {
       Census.findOne({
         where: {
 //<<<<<<< tybopp
-          //Areaname: searchParams
+          areaname: searchParams
 //=======
-          areaname: req.params.city
+          //areaname: req.params.city
 //>>>>>>> master
         }
       }).then(function (results) {
