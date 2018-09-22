@@ -48,7 +48,8 @@ $("#search-btn").on("click", function () {
       // the age
       $("#test-data-dump").append("<h3>Data Set #2: " + data.totalPopulation + "</h3>");
 
-      // General side bar graph (blue)
+      // General side bar graph (blue) clearing then appending new data
+      $(".bar-fill").remove();
       $("#percentPopulationOver65").append(`<span class="bar-fill" style="width:${data.populationOver65}%;"></span>`);
       $("#unemploymentRate2010").append(`<span class="bar-fill" style="width:${data.unemploymentRate2010}%;"></span>`);
 
