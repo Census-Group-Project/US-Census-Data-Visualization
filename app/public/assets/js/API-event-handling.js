@@ -42,30 +42,31 @@ $("#search-btn").on("click", function () {
 //=======
       // otherwise
       // append the character name
-      $("#test-data-dump").append("<h2> Areanam:"+ data.areaname + "</h2>");
+      $("#test-data-dump").append("<h2> City Name:"+ data.areaname + "</h2>");
       // the role
-      $("#test-data-dump").append("<h3>Data Set #1: " + data.stateCounty + "</h3>");
+      $("#test-data-dump").append("<h3>State and County #: " + data.stateCounty + "</h3>");
       // the age
-      $("#test-data-dump").append("<h3>Data Set #2: " + data.totalPopulation + "</h3>");
+      $("#test-data-dump").append("<h3>Total Population: " + data.totalPopulation + "</h3>");
 
       // General side bar graph (blue) clearing then appending new data
       $(".bar-fill").remove();
       $("#percentPopulationOver65").append(`<span class="bar-fill" style="width:${data.populationOver65}%;"></span>`);
       $("#unemploymentRate2010").append(`<span class="bar-fill" style="width:${data.unemploymentRate2010}%;"></span>`);
+      
+      // Calculate a city's percentage of families below poverty level
+      const mathFamiliesBelowPovertyLevel = (data.familiesBelowPovertyLevel / data.totalPopulation) * 1000;
+      console.log(mathFamiliesBelowPovertyLevel);
+
+      // Creating a container for displaying the mean and median incomes into their bar graph
+      const mathMeanFamilyIncome = (Math.round(data.meanFamilyIncome / 1000));
+      $("#textMeanFamilyIncome").append(`$${mathMeanFamilyIncome}K`);
+
+      const mathMedianFamilyIncome = (Math.round(data.medianFamilyIncome / 1000));
+      $("#textMedianFamilyIncome").append(`$${mathMedianFamilyIncome}K`);
+
 
       //Clear the previous content
       $(".bar").remove();
-      // $("#repVote1992").empty();
-      // $("#demVote1992").empty();
-      // $("#repVote1996").empty();
-      // $("#demVote1996").empty();
-      // $("#repVote2000").empty();
-      // $("#demVote2000").empty();
-      // $("#repVote2004").empty();
-      // $("#demVote2004").empty();
-      // $("#repVote2008").empty();
-      // $("#demVote2008").empty();
-
       // Amending political party vote data to their IDs in index.html
       $("#repVote1992").append(`<div class="bar bar-1 stat-1" style="height:${data.percentageRep1992}%;"></div>`);
       $("#demVote1992").append(`<div class="bar bar-3 stat-3" style="height:${data.percentageDem1992}%;"></div>`);
@@ -77,7 +78,6 @@ $("#search-btn").on("click", function () {
       $("#demVote2004").append(`<div class="bar bar-12 stat-3" style="height:${data.percentageDem2004}%;"></div>`);
       $("#repVote2008").append(`<div class="bar bar-13 stat-1" style="height:${data.percentageRep2008}%;"></div>`);
       $("#demVote2008").append(`<div class="bar bar-15 stat-3" style="height:${data.percentageDem2008}%;"></div>`);
-//>>>>>>> master
     }
   });
 });

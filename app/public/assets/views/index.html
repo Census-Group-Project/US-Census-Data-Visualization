@@ -78,7 +78,7 @@
                             <div id="search">
                                 <form group="search" method="POST">
                                     <span class="ac ac-hidden"></span>
-                                    <input type="text" id="city-search" placeholder="Type any American city, Ex: Austin, TX">
+                                    <input type="text" id="city-search" placeholder="Type a US city, Ex: Austin, TX">
                                     <button id="search-btn">Search</button>
                                 </form>
                             </div>
@@ -97,7 +97,8 @@
                 <!-- Test div for data dump -- TO BE REMOVED BEFORE DEPLOYMENT! -->
                 <!-- <div id="test-data-dump"></div> -->
 
-                <h2 class="section-heading text-white" id="test-data-dump">We've got what you need!</h2>
+                <h3 class="section-heading text-white text-center" id="test-data-dump">A Tool for Analyzing American
+                    Political, Economic, and Social Characteristics</h3>
                 <hr class="light my-4">
                 <p class="text-faded mb-4">Start Bootstrap has everything you need to get your new website up and
                     running in no time! All of the templates and themes on Start Bootstrap are open source, free to
@@ -119,21 +120,26 @@
                 <div class="col-lg-6 mx-auto text-center">
                     <!-- Start Default Bar Graph -->
                     <ul class="bar-graph">
+                        <h2>General Population Statistics</h2>
                         <li>
                             <p>Percentage of the Population Above Age 65</p>
                             <div id="percentPopulationOver65" class="bar-wrap"><span class="bar-fill" style="width: 0%;"></span></div>
                         </li>
                         <li>
                             <p>Unemployment Rate (2010)</p>
-                            <div id="unemploymentRate2010"></div>
+                            <div id="unemploymentRate2010" class="bar-wrap"><span class="bar-fill" style="width: 0%;"></span></div>
                         </li>
                         <li>
-                            <p>Statistic</p>
-                            <div class="bar-wrap"><span class="bar-fill" style="width: 60%;"></span></div>
+                            <h4>Mean Family Income<p id="textMeanFamilyIncome"></p>
+                            </h4>
                         </li>
                         <li>
-                            <p>Statistic</p>
-                            <div class="bar-wrap"><span class="bar-fill" style="width: 50%;"></span></div>
+                            <h4>Median Family Income<p id="textMedianFamilyIncome"></p>
+                            </h4>
+                        </li>
+                        <li>
+                            <p>Percentage of Families Below Poverty Level</p>
+                            <div id="mathFamiliesBelowPovertyLevel" class="bar-wrap"><span class="bar-fill" style="width: 0%;"></span></div>
                         </li>
                     </ul>
 
