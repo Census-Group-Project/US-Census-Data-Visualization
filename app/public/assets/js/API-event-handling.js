@@ -18,7 +18,9 @@ $("#search-btn").on("click", function () {
   // Splits search variable at the comma, seporating city and state into an array of two seperate strings.
   searchedCity = searchedCity.split(",");
 
-  // Re-defines search variable as single string, inserting a character '&' in between city and state (because we cannot pass a comma in the AJAX URL for our API).
+
+  // Re-defines search variable as single string, joining each string with a wildcard character '&' in between (because we cannot pass a comma into the AJAX URL for our API).
+
   searchedCity = searchedCity[0] + "&" + searchedCity[1];
 
   // run an AJAX GET-request for our servers api,
@@ -26,27 +28,19 @@ $("#search-btn").on("click", function () {
   $.get("/api/" + searchedCity, function (data) {
     // log the data to our console
     console.log(data);
-    // empty to test-data-dump section before adding new content
+    // empty to test-data-dump section bexfore adding new content
     $("#test-data-dump").empty();
     // if the data is not found in the DB, then return the following error message on the page:
     if (!data) {
       $("#test-data-dump").append("<h2> Hmmm... No data was returned from database. Try another city. </h2>");
     } else {
-//<<<<<<< tybopp
       // otherwise, append the search result data to the test-data-dump div at the bottom of the page:
-      //$("#test-data-dump").append("<h2>" + data.Areaname + "</h2>");
+      $("#test-data-dump").append("<h2>" + data.Areaname + "</h2>");
       // Example Data Set #1
-      //$("#test-data-dump").append("<h3>Data Set #1: " + data.STCOU + "</h3>");
+      $("#test-data-dump").append("<h3>Data Set #1: " + data.STCOU + "</h3>");
       // Example Data Set #2
-      //$("#test-data-dump").append("<h3>Data Set #2: " + data.PST100209D + "</h3>");
-//=======
-      // otherwise
-      // append the character name
-      $("#test-data-dump").append("<h2> Areanam:"+ data.areaname + "</h2>");
-      // the role
-      $("#test-data-dump").append("<h3>Data Set #1: " + data.stateCounty + "</h3>");
-      // the age
-      $("#test-data-dump").append("<h3>Data Set #2: " + data.totalPopulation + "</h3>");
+      $("#test-data-dump").append("<h3>Data Set #2: " + data.PST100209D + "</h3>");
+      
 
       // General side bar graph (blue) clearing then appending new data
       $(".bar-fill").remove();
@@ -77,7 +71,6 @@ $("#search-btn").on("click", function () {
       $("#demVote2004").append(`<div class="bar bar-12 stat-3" style="height:${data.percentageDem2004}%;"></div>`);
       $("#repVote2008").append(`<div class="bar bar-13 stat-1" style="height:${data.percentageRep2008}%;"></div>`);
       $("#demVote2008").append(`<div class="bar bar-15 stat-3" style="height:${data.percentageDem2008}%;"></div>`);
-//>>>>>>> master
     }
   });
 });

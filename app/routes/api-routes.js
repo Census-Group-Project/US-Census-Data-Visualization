@@ -7,22 +7,22 @@ module.exports = function (app) {
   app.get("/api/:city?", function (req, res) {
     if (req.params.city) {
 
-      // Re-construct search params for database:
-      // 1. Store the incoming search parameters into a variable.
+      // Re-construct incoming search params for database:
+      // 1. Store the search params into a variable.
       let searchParams = req.params.city;
+
       // 2. Split the search variable into an array of two separate strings (city and the state) at the wildcard character '&'.
       searchParams = searchParams.split("&");
+
       // 3. Re-define the search variable as the two strings connected with a ", " in between city and state strings in order to pass the exact format required for the database search.
       searchParams = searchParams[0] + ", " + searchParams[1];
 
       // Pass the search params to sequelize to perform the search.
       Census.findOne({
         where: {
-//<<<<<<< tybopp
-          areaname: searchParams
-//=======
-          //areaname: req.params.city
-//>>>>>>> master
+          
+          Areaname: searchParams
+
         }
       }).then(function (results) {
         return res.json(results);
@@ -30,7 +30,7 @@ module.exports = function (app) {
     } else {
       Census.findOne({
         where: {
-          areaname: 'UNITED STATES'
+          Areaname: 'UNITED STATES'
         }
       }).then(function (results) {
         return res.json(results);
