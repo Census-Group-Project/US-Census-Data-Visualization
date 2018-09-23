@@ -52,7 +52,7 @@ a {
 }
 #search input, #search .ac {
   line-height: 20px;
-  font-size: 20px;
+  font-size: 18px;
   font-family: "Karla", sans-serif;
   font-weight: normal;
   letter-spacing: 0em;
@@ -71,9 +71,10 @@ a {
 @media only screen and (max-width: 600px) {
   #search input {
     width: 250px;
+    padding: 15px;
   }
   #search input, #search .ac {
-    font-size: 16px;
+    font-size: 10px;
   }
 }
 

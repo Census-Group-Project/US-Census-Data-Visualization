@@ -18,7 +18,9 @@ $("#search-btn").on("click", function () {
   // Splits search variable at the comma, seporating city and state into an array of two seperate strings.
   searchedCity = searchedCity.split(",");
 
+
   // Re-defines search variable as single string, joining each string with a wildcard character '&' in between (because we cannot pass a comma into the AJAX URL for our API).
+
   searchedCity = searchedCity[0] + "&" + searchedCity[1];
 
   // run an AJAX GET-request for our servers api,
@@ -40,9 +42,23 @@ $("#search-btn").on("click", function () {
       $("#test-data-dump").append("<h3>Data Set #2: " + data.PST100209D + "</h3>");
       
 
-      // General side bar graph (blue)
+      // General side bar graph (blue) clearing then appending new data
+      $(".bar-fill").remove();
       $("#percentPopulationOver65").append(`<span class="bar-fill" style="width:${data.populationOver65}%;"></span>`);
       $("#unemploymentRate2010").append(`<span class="bar-fill" style="width:${data.unemploymentRate2010}%;"></span>`);
+
+      //Clear the previous content
+      $(".bar").remove();
+      // $("#repVote1992").empty();
+      // $("#demVote1992").empty();
+      // $("#repVote1996").empty();
+      // $("#demVote1996").empty();
+      // $("#repVote2000").empty();
+      // $("#demVote2000").empty();
+      // $("#repVote2004").empty();
+      // $("#demVote2004").empty();
+      // $("#repVote2008").empty();
+      // $("#demVote2008").empty();
 
       // Amending political party vote data to their IDs in index.html
       $("#repVote1992").append(`<div class="bar bar-1 stat-1" style="height:${data.percentageRep1992}%;"></div>`);
