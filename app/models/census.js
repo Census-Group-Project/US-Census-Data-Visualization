@@ -6,14 +6,17 @@ const sequelize = require("../config/connection.js");
 
 // Creates a "Census" model that matches up with DB (MATCHES ALL COLUMNS in DB - AT LEAST WHAT WE WANT THIS MODEL TO BE ABLE TO MANIPULATE )
 let Census = sequelize.define("CensusData", {
+  Reduced_Name: {
+    type: Sequelize.TEXT
+  },
   Areaname: {
     type: Sequelize.TEXT
   },
   STCOU: {
-    type: Sequelize.INTEGER
+    type: Sequelize.TEXT
   },
   PST100209D: {
-    type: Sequelize.INTEGER
+    type: Sequelize.TEXT
   },
 }, {
   freezeTableName: true,
@@ -21,10 +24,10 @@ let Census = sequelize.define("CensusData", {
 
 });
 
-// Syncs with DB and if 'force = false', an existing table will NOT be dropped and a new one created.
+// Syncs with DB and if 'force = false', any existing table will NOT be dropped and a new one created.
 Census.sync({
   force: false
 });
 
-// Makes the Query Model available for other files (will also create a table)
+// Makes the Query Model available for other files
 module.exports = Census;
