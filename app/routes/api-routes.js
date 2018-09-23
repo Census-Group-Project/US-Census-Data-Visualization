@@ -20,7 +20,9 @@ module.exports = function (app) {
       // Pass the search params to sequelize to perform the search.
       Census.findOne({
         where: {
+          
           Areaname: searchParams
+
         }
       }).then(function (results) {
         return res.json(results);
