@@ -526,3 +526,53 @@ body {
 .timesNewRomanText {
   font-family: 'Times New Roman', Times, serif;
 }
+
+/* Reducing padding bottom for about section */
+#about {
+  padding-top: 50px;
+  padding-bottom: 0px;
+}
+
+/* Need room between the Racial Demographics chart title and the pie chart */
+.customPieChart {
+  /* padding-top: 200px; */
+}
+
+#racialDemographicsSubtitleStyle {
+  padding-top: 50px;
+}
+ /* Styling for About Heading */
+.googleFontsRaleway {
+  font-family: 'Raleway', sans-serif;
+}
+#aboutHeading {
+  padding-bottom: 0px;
+}
+#aboutDescription {
+  padding-bottom: 0px;
+}
+/* Create necessary left padding for mobile display */
+@media only screen and (max-width: 600px) {
+  #aboutDescription {
+    padding-left: 10px;
+  }
+}
+#shrinkAboutContainer {
+  padding-top: 50px;
+  padding-bottom: 0px;
+}
+
+.googleFontsNoto {
+  font-family: 'Noto Serif JP', sans-serif;
+  font-size: 14pt;
+}
+
+#pushPieChartDown {
+  padding-bottom: 400px;
+}
+
+/* Reducing the padding of the first graphical section */
+#firstGraphicalSection {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
