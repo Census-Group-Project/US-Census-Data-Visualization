@@ -18,6 +18,7 @@
         rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic'
         rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <!-- Plugin CSS -->
     <link href="../bootstrap/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
     <!-- Custom styles for this template -->
@@ -120,14 +121,18 @@
                 <div class="col-lg-6 mx-auto text-center">
                     <!-- Start Default Bar Graph -->
                     <ul class="bar-graph">
-                        <h2>General Population Statistics</h2>
+                        <h1 class="timesNewRomanText">General Population Statistics</h1>
                         <li>
-                            <p>Percentage of the Population Above Age 65</p>
+                            <h4>Percentage of the Population Under Age 18</h4>
+                            <div id="percentPopulationUnder18" class="bar-wrap"><span class="bar-fill" style="width: 0%;"></span></div>
+                        </li>
+                        <li>
+                            <h4>Percentage of the Population Above Age 65</h4>
                             <div id="percentPopulationOver65" class="bar-wrap"><span class="bar-fill" style="width: 0%;"></span></div>
                         </li>
                         <li>
-                            <p>Unemployment Rate (2010)</p>
-                            <div id="unemploymentRate2010" class="bar-wrap"><span class="bar-fill" style="width: 0%;"></span></div>
+                            <h4>Percentage of Families Below Poverty Level</h4>
+                            <div id="mathFamiliesBelowPovertyLevel" class="bar-wrap"><span class="bar-fill" style="width: 0%;"></span></div>
                         </li>
                         <li>
                             <h4>Mean Family Income<p id="textMeanFamilyIncome"></p>
@@ -138,8 +143,9 @@
                             </h4>
                         </li>
                         <li>
-                            <p>Percentage of Families Below Poverty Level</p>
-                            <div id="mathFamiliesBelowPovertyLevel" class="bar-wrap"><span class="bar-fill" style="width: 0%;"></span></div>
+                            <h4>Unemployment Rate (2010)<p id="textUnemploymentRate2010"></p>
+                            </h4>
+                            <div id="graphUnemploymentRate2010" class="bar-wrap"><span class="bar-fill" style="width: 0%;"></span></div>
                         </li>
                     </ul>
 
