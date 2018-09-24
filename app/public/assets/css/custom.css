@@ -518,8 +518,7 @@ body {
     display: none;
 }
 
-/* Added custom statistic figures */
-.removeCustomStat {
+.googleFontOpenSans {
   font-family: 'Open Sans', sans-serif;
 }
 

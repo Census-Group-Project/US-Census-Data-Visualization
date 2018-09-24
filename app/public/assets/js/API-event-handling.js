@@ -53,31 +53,29 @@ $("#search-btn").on("click", function () {
       // Removing all custom stats
       $(".removeCustomStat").remove();
 
-      // General Population Statistics, first three stats
+      // General Population Statistics
       // We need to calculate the percentage of pop under 18, so we'll divide total amount of ppl under 18 by the total population
       const mathPercentPopulationUnder18 = Math.round((data.populationUnder18 / data.totalPopulation) * 100);
-      $("#percentPopulationUnder18").append(`<span class="bar-fill" style="width:${mathPercentPopulationUnder18}%;"></span>`);
-      $("#percentPopulationOver65").append(`<span class="bar-fill" style="width:${data.populationOver65}%;"></span>`);
-     
+      $("#textPercentPopulationUnder18").append(`<h4 class="removeCustomStat">${mathPercentPopulationUnder18}%</h4>`);
+      $("#graphPercentPopulationUnder18").append(`<span class="bar-fill" style="width:${mathPercentPopulationUnder18}%;"></span>`);
+
+      $("#textPercentPopulationOver65").append(`<h4 class="removeCustomStat">${data.populationOver65}%</h4>`);
+      $("#graphPercentPopulationOver65").append(`<span class="bar-fill" style="width:${data.populationOver65}%;"></span>`);
 
       // Calculate a city's percentage of families below poverty level
       const mathFamiliesBelowPovertyLevel = (Math.round(data.familiesBelowPovertyLevel / data.totalPopulation * 1000));
-      $("#mathFamiliesBelowPovertyLevel").append(`<h4 class="removeCustomStat">${mathFamiliesBelowPovertyLevel}%</h4><span class="bar-fill" style="width:${mathFamiliesBelowPovertyLevel}%;"></span>`);
-
+      $("#textFamiliesBelowPovertyLevel").append(`<h4 class="removeCustomStat">${mathFamiliesBelowPovertyLevel}%</h4>`);
+      $("#graphFamiliesBelowPovertyLevel").append(`<span class="bar-fill" style="width:${mathFamiliesBelowPovertyLevel}%;"></span>`);
+      
       // Creating a container for displaying the mean and median incomes into their bar graph
       const mathMeanFamilyIncome = (Math.round(data.meanFamilyIncome / 1000));
       $("#textMeanFamilyIncome").append(`<h4 class="removeCustomStat">$${mathMeanFamilyIncome}K</h4>`);
+      
       // Doing the same for the median income and unemployment
       const mathMedianFamilyIncome = (Math.round(data.medianFamilyIncome / 1000));
       $("#textMedianFamilyIncome").append(`<h4 class="removeCustomStat">$${mathMedianFamilyIncome}K</h4>`);
-      // Function necessary for getting the unemployment stat to the tenth decimal, ex: 9.6%
-      function round(value, decimals) {
-        return Number(Math.round(value+'e'+decimals)+'e-'+decimals);
-      }
-      const mathUnemploymentRate2010 = round(data.unemploymentRate2010, 2); 
-      //const mathUnemploymentRate2010 = Number(Math.round((Math.round(data.unemploymentRate2010 / 1000)+'e'+decimals)+'e-'+decimals));
-      $("#textUnemploymentRate2010").append(`<h4 class="removeCustomStat">$${mathUnemploymentRate2010}%</h4>`);
-      $("#graphUnemploymentRate2010").append(`<span class="bar-fill" style="width:${mathUnemploymentRate2010}%;"></span>`);
+      $("#textUnemploymentRate2010").append(`<h4 class="removeCustomStat">$${data.unemploymentRate2010}%</h4>`);
+      $("#graphUnemploymentRate2010").append(`<span class="bar-fill" style="width:${data.unemploymentRate2010}%;"></span>`);
 
       //Clear the previous content
       $(".bar").remove();
