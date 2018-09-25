@@ -368,6 +368,12 @@ body {
 #bar-chart .bar-group:last-child {
   margin-right: 0;
 }
+/* so a little bit about how to read CSS: */
+/* BASICALLY the text in yellow here signifies a `class`: */
+/* it's basically saying "anything with a class of bar-chart, bar-group, or bar will have the FOLLOWING styles applied.: */
+
+/* BASICALLY the text in yellow here signifies a `class`: */
+
 #bar-chart .bar-group .bar {
   visibility: hidden;
   height: 0;
@@ -517,3 +523,15 @@ body {
 .hidden {
     display: none;
 }
+
+.project-name {
+  font-size: 40px !important;
+  font-family: Georgia, 'Times New Roman', Times, serif !important;
+  color: black;
+}
+
+.portfolio-box .background-white {
+    background: rgba(255, 255, 255, 0.507);
+    
+}
+/*the text size isnt changing reeeeeeeeeeeeee hmm THiNkINg lets check f12 lol so it looks like something else was OVERWRITING our style. 
