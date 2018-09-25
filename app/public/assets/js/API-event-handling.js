@@ -371,15 +371,13 @@ $("#search-btn").on("click", function () {
 
 
       // Remove Default Graph 4 and replace with custom graph 4
-
+      $("#myChart").remove()
 
       $.ajax(censusDataObject).done(function (response) {
         console.log(response);
       });
       
       // Changing the income data into figures compatible with the chart
-      console.log(data.incomeLessThan10K);
-      console.log(data.incomeBtw10And15K);
       const graphIncomeLessThan10K = data.incomeLessThan10K / 1000000;
       const graphIncomeBtw10And15K = data.incomeBtw10And15K / 1000000;
       const graphIncomeBtw15And20K = data.incomeBtw15And20K / 1000000;
@@ -388,20 +386,19 @@ $("#search-btn").on("click", function () {
       const graphIncomeBtw30And35K = data.incomeBtw30And35K / 1000000;
       const graphIncomeBtw35And40K = data.incomeBtw35And40K / 1000000;
       const graphIncomeBtw40And45K = data.incomeBtw40And45K / 1000000;
-
       const graphIncomeBtw45And50K = data.incomeBtw45And50K / 1000000;
       const graphIncomeBtw50And60K = data.incomeBtw50And60K / 1000000;
       const graphIncomeBtw60And75K = data.incomeBtw60And75K / 1000000;
       const graphIncomeBtw75And100K = data.incomeBtw75And100K / 1000000;
       const graphIncomeBtw100And125K = data.incomeBtw100And125K / 1000000;
-      const graphIncomeBtw125And150K= data.incomeBtw125And150K / 1000000;
+      const graphIncomeBtw125And150K = data.incomeBtw125And150K / 1000000;
       const graphIncomeBtw150And200K = data.incomeBtw150And200K / 1000000;
-      const graphIncome200Plus= data.income200Plus / 1000000;
+      const graphIncome200Plus = data.income200Plus / 1000000;
       
 
 
-      var ctx = document.getElementById("myChart").getContext('2d');
-      var myChart = new Chart(ctx, {
+      var ctx = document.getElementById("myChartCustom").getContext('2d');
+      var myChartCustom = new Chart(ctx, {
         type: 'bar',
         data: {
             labels: ["Less Than $10K", "$10K - $15K", "$15K - $20K", "$20K - $25K", "$30K - $35K", "$35K - $40K", "$40K - $45K", "$45K - $50K", "$50K - $60K", "$60K - $75K", "$75K - $100K", "$100K - $125K", "$125K - $150K", "$150K - $200K", "$200K+"],
