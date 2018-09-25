@@ -571,8 +571,21 @@ body {
   padding-bottom: 400px;
 }
 
+/* #pushCustomPieChartDown {
+  padding-bottom: 200px;
+} */
+
 /* Reducing the padding of the first graphical section */
 #firstGraphicalSection {
   padding-top: 0px;
   padding-bottom: 0px;
+}
+
+/* Changing bar display color of General Population Statistics graphes */
+.bar-wrap {
+  border: 1px solid darkgrey;
+}
+
+.bar-fill {
+  background-color: rgb(202, 50, 0);
 }

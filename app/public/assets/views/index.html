@@ -109,17 +109,23 @@
             <div class="row">
                 <div class="col-lg-6 mx-auto text-center">
                     <h1 id="racialDemographicsSubtitleStyle" class="timesNewRomanText">Racial Demographics</h1>
-                    <li>
-                        <h4>Percentage of the Population Under Age 18<p id></p>
-                            </p>
-                        </h4>
-                    </li>
+                    <div class="googleFontOpenSans">
+                    <h3>Percentage of the Population</h3>
+                        <h5 id="graphWhitePopulation">White alone: </h5>
+                        <h5>Black alone: </h5>
+                        <h5>Asian alone: </h5>
+                        <h5>Hispanic or Latino alone:</h5>
+                        <h5>Hawaiian and Pacific Islander alone: </h5>
+                    </div>
                     <!-- Creating row and col-lg-6 within this existing col-lg-6 to give the pie chart a different plane than its accompanying text, the unique id is used to push it down -->
                     <div class="row">
                         <div class="col-lg-6 mx-auto text-center">
                             <h1 id="pushPieChartDown"></h1>
                             <!-- Start Default Pie Chart -->
-                            <div id="pieChart" class="chart customPieChart"></div>
+                            <div id="pieChart" class="chart customPieChart">
+                                <!-- <h1 id="pushCustomPieChartDown"></h1> -->
+                            </div>
+                            <div class="customPieChart"></div>
                             <!-- End Default Pie Chart -->
                         </div>
                     </div>
@@ -453,7 +459,6 @@
 
     <!-- CDN for Chart.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js" type="text/javascript"></script>
-    <script src="../js/custom.js" type="text/javascript"></script>
     <script src="../js/app.js" type="text/javascript"></script>
 
     <!-- Custom scripts for this template -->
