@@ -18,6 +18,9 @@
         rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic'
         rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP" rel="stylesheet">
     <!-- Plugin CSS -->
     <link href="../bootstrap/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
     <!-- Custom styles for this template -->
@@ -78,7 +81,7 @@
                             <div id="search">
                                 <form group="search" method="POST">
                                     <span class="ac ac-hidden"></span>
-                                    <input type="text" id="city-search" placeholder="Type any American city, Ex: Austin, TX">
+                                    <input type="text" id="city-search" placeholder="Type a US city, Ex: Austin, TX">
                                     <button id="search-btn">Search</button>
                                 </form>
                             </div>
@@ -91,49 +94,77 @@
     </header>
 
     <section class="bg-primary" id="about">
-        <div class="container">
+        <div class="container" id="shrinkAboutContainer">
             <div class="row">
-
-                <!-- Test div for data dump -- TO BE REMOVED BEFORE DEPLOYMENT! -->
-                <!-- <div id="test-data-dump"></div> -->
-
-                <h2 class="section-heading text-white" id="test-data-dump">We've got what you need!</h2>
-                <hr class="light my-4">
-                <p class="text-faded mb-4">Start Bootstrap has everything you need to get your new website up and
-                    running in no time! All of the templates and themes on Start Bootstrap are open source, free to
-                    download, and easy to use. No strings attached!</p>
-                <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
+                <h3 id="aboutHeading" class="section-heading text-white text-center googleFontsRaleway">A Tool for
+                    Analyzing American Political, Economic, and Social Characteristics</h3>
+                <p id="aboutDescription" class="googleFontsNoto text-faded mb-4">Start Bootstrap has everything you
+                    need to get your new website up and running in no time! All of the templates and themes on Start
+                    Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
             </div>
         </div>
     </section>
-    <section class="bg-primary">
+    <section class="bg-primary" id="firstGraphicalSection">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 mx-auto text-center">
-
-                    <!-- Start Default Pie Chart -->
-                    <div id="pieChart" class="chart"></div>
-                    <!-- End Default Pie Chart -->
-
+                    <h1 id="racialDemographicsSubtitleStyle" class="timesNewRomanText">Racial Demographics</h1>
+                    <div class="googleFontOpenSans">
+                    <h3>Percentage of the Population</h3>
+                        <h6 id="graphWhitePopulation">White alone: </h6>
+                        <h6 id="graphBlackPopulation">Black alone: </h6>
+                        <h6 id="graphAsianPopulation">Asian alone: </h6>
+                        <h6 id="graphHispanicOrLatinoPopulation">Hispanic or Latino alone:</h6>
+                        <h6 id="graphAmericanIndianAndAlaskanNativePopulation">American Indian and Alaskan Native alone: </h6>
+                        <h6 id="graphNativeHawaiianAndPacificIslanderPopulation">Native Hawaiian and Pacific Islander alone: </h6>
+                        <h6 id="graphTwoOrMoreRacesPopulation">Two or More Races: </h6>
+                    </div>
+                    <!-- Creating row and col-lg-6 within this existing col-lg-6 to give the pie chart a different plane than its accompanying text, the unique id is used to push it down -->
+                    <div class="row">
+                        <div class="col-lg-6 mx-auto text-center">
+                            <h1 id="pushPieChartDown"></h1>
+                            <!-- Start Default Pie Chart -->
+                            <div id="pieChart" class="chart customPieChart">
+                                <!-- <h1 id="pushCustomPieChartDown"></h1> -->
+                            </div>
+                            <div class="customPieChart"></div>
+                            <!-- End Default Pie Chart -->
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-6 mx-auto text-center">
+                <div class="col-lg-6 mx-auto text-center timesNewRomanText">
                     <!-- Start Default Bar Graph -->
-                    <ul class="bar-graph">
+                    <ul class="bar-graph googleFontOpenSans">
+                        <h1 class="timesNewRomanText">General Population Statistics</h1>
                         <li>
-                            <p>Percentage of the Population Above Age 65</p>
-                            <div id="percentPopulationOver65" class="bar-wrap"><span class="bar-fill" style="width: 0%;"></span></div>
+                            <h4>Percentage of the Population Under Age 18<p id="textPercentPopulationUnder18"></p>
+                                </p>
+                            </h4>
+                            <div id="graphPercentPopulationUnder18" class="bar-wrap"><span class="bar-fill" style="width: 0%;"></span></div>
                         </li>
                         <li>
-                            <p>Unemployment Rate (2010)</p>
-                            <div id="unemploymentRate2010"></div>
+                            <h4>Percentage of the Population Above Age 65<p id="textPercentPopulationOver65"></p>
+                                </p>
+                            </h4>
+                            <div id="graphPercentPopulationOver65" class="bar-wrap"><span class="bar-fill" style="width: 0%;"></span></div>
                         </li>
                         <li>
-                            <p>Statistic</p>
-                            <div class="bar-wrap"><span class="bar-fill" style="width: 60%;"></span></div>
+                            <h4>Percentage of Families Below Poverty Level<p id="textFamiliesBelowPovertyLevel"></p>
+                            </h4>
+                            <div id="graphFamiliesBelowPovertyLevel" class="bar-wrap"><span class="bar-fill" style="width: 0%;"></span></div>
                         </li>
                         <li>
-                            <p>Statistic</p>
-                            <div class="bar-wrap"><span class="bar-fill" style="width: 50%;"></span></div>
+                            <h4>Mean Family Income<p id="textMeanFamilyIncome"></p>
+                            </h4>
+                        </li>
+                        <li>
+                            <h4>Median Family Income<p id="textMedianFamilyIncome"></p>
+                            </h4>
+                        </li>
+                        <li>
+                            <h4>Unemployment Rate (2010)<p id="textUnemploymentRate2010"></p>
+                            </h4>
+                            <div id="graphUnemploymentRate2010" class="bar-wrap"><span class="bar-fill" style="width: 0%;"></span></div>
                         </li>
                     </ul>
 
@@ -147,7 +178,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Presidential Party Nominee Vote Percentage</h2>
+                    <h2 class="section-heading timesNewRomanText">Presidential Party Nominee Vote Percentage</h2>
                     <hr class="my-4">
                 </div>
             </div>
@@ -234,7 +265,7 @@
                         </div>
                     </div>
 
-                    <h2 class="section-heading">At Your Service</h2>
+                    <h2 class="section-heading timesNewRomanText">Income Distribution</h2>
                     <hr class="my-4">
                 </div>
             </div>
@@ -243,7 +274,10 @@
         <div class="container">
             <div class="row">
 
-                <canvas id="myChart" width="400" height="400"></canvas>
+                <!-- Start Income Distribution Graph -->
+                <canvas id="myChart" width="400" height="200"></canvas>
+                <canvas id="myChartCustom" width="400" height="200"></canvas>
+                <!-- End Income Distribution Graph -->
 
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box mt-5 mx-auto">
@@ -430,7 +464,6 @@
 
     <!-- CDN for Chart.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js" type="text/javascript"></script>
-    <script src="../js/custom.js" type="text/javascript"></script>
     <script src="../js/app.js" type="text/javascript"></script>
 
     <!-- Custom scripts for this template -->

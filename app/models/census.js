@@ -18,6 +18,30 @@ let Census = sequelize.define("CensusData", {
   PST100209D: {
     type: Sequelize.TEXT
   },
+  percentageRep2008: {
+    type: Sequelize.INTEGER
+  },
+  whitePopulation: {
+    type: Sequelize.INTEGER
+  },
+  blackPopulation: {
+    type: Sequelize.INTEGER
+  },
+  americanIndianAndAlaskanNativePopulation: {
+    type: Sequelize.INTEGER
+  },
+  asianPopulation: {
+    type: Sequelize.INTEGER
+  },
+  nativeHawaiianAndPacificIslanderPopulation: {
+    type: Sequelize.INTEGER
+  },
+  twoOrMoreRacesPopulation: {
+    type: Sequelize.INTEGER
+  },
+  hispanicOrLatinoPopulation: {
+    type: Sequelize.INTEGER
+  }
 }, {
   freezeTableName: true,
   timestamps: false
