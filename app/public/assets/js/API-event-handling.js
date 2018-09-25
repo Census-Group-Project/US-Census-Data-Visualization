@@ -32,22 +32,22 @@ $("#search-btn").on("click", function () {
     $("#test-data-dump").empty();
     // if the data is not found in the DB, then return the following error message on the page:
     if (!data) {
-      $("#test-data-dump").append("<h2> Hmmm... No data was returned from database. Try another city. </h2>");
+      // $("#test-data-dump").append("<h2> Hmmm... No data was returned from database. Try another city. </h2>");
     } else {
       // otherwise, append the search result data to the test-data-dump div at the bottom of the page:
-      $("#test-data-dump").append("<h2>" + data.Areaname + "</h2>");
-      // Example Data Set #1
-      $("#test-data-dump").append("<h3>Data Set #1: " + data.STCOU + "</h3>");
-      // Example Data Set #2
-      //$("#test-data-dump").append("<h3>Data Set #2: " + data.PST100209D + "</h3>");
-      // otherwise
-      // append the character name
-      $("#test-data-dump").append("<h2> City Name:"+ data.areaname + "</h2>");
-      // the role
-      $("#test-data-dump").append("<h3>State and County #: " + data.stateCounty + "</h3>");
-      // the age
-      $("#test-data-dump").append("<h3>Total Population: " + data.totalPopulation + "</h3>");
-      $("#test-data-dump").append("<h3>Data Set #2: " + data.PST100209D + "</h3>");
+      // $("#test-data-dump").append("<h2>" + data.Areaname + "</h2>");
+      // // Example Data Set #1
+      // $("#test-data-dump").append("<h3>Data Set #1: " + data.STCOU + "</h3>");
+      // // Example Data Set #2
+      // //$("#test-data-dump").append("<h3>Data Set #2: " + data.PST100209D + "</h3>");
+      // // otherwise
+      // // append the character name
+      // $("#test-data-dump").append("<h2> City Name:"+ data.areaname + "</h2>");
+      // // the role
+      // $("#test-data-dump").append("<h3>State and County #: " + data.stateCounty + "</h3>");
+      // // the age
+      // $("#test-data-dump").append("<h3>Total Population: " + data.totalPopulation + "</h3>");
+      // $("#test-data-dump").append("<h3>Data Set #2: " + data.PST100209D + "</h3>");
       
 
       // General side bar graph (blue) clearing then appending new data
