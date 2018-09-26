@@ -8,6 +8,9 @@ const sequelize = require("../config/connection.js");
 
 // Creates a "Census" model that matches up with DB (MATCHES ALL COLUMNS in DB - AT LEAST WHAT WE WANT THIS MODEL TO BE ABLE TO MANIPULATE )
 let Census = sequelize.define("censusdata", {
+  reducedName: {
+    type: Sequelize.TEXT
+  },
   areaname: {
     type: Sequelize.TEXT
   },

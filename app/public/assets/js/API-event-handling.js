@@ -32,7 +32,7 @@ $("#search-btn").on("click", function () {
     $("#test-data-dump").empty();
     // if the data is not found in the DB, then return the following error message on the page:
     if (!data) {
-      // $("#test-data-dump").append("<h2> Hmmm... No data was returned from database. Try another city. </h2>");
+      $("#test-data-dump").append("<h2> Hmmm... No data was returned from database. Try another city. </h2>");
     } else {
       // otherwise, append the search result data to the test-data-dump div at the bottom of the page:
       // $("#test-data-dump").append("<h2>" + data.Areaname + "</h2>");
