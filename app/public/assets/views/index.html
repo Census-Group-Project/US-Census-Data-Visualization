@@ -49,7 +49,7 @@
                         <a class="nav-link js-scroll-trigger" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#portfolio">Resources</a>
+                        <a class="nav-link js-scroll-trigger" href="#portfolio">Major Cities </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
@@ -78,7 +78,7 @@
                             <div id="search">
                                 <form group="search" method="POST">
                                     <span class="ac ac-hidden"></span>
-                                    <input type="text" id="city-search" placeholder="Type any American city, Ex: Austin, TX">
+                                    <input type="text" id="city-search" placeholder="Type any U.S city. Ex: Austin, TX . . .">
                                     <button id="search-btn">Search</button>
                                 </form>
                             </div>
@@ -93,17 +93,25 @@
     <section class="bg-primary" id="about">
         <div class="container">
             <div class="row">
-
                 <!-- Test div for data dump -- TO BE REMOVED BEFORE DEPLOYMENT! -->
                 <!-- <div id="test-data-dump"></div> -->
-
-                <h2 class="section-heading text-white" id="test-data-dump">We've got what you need!</h2>
+                <h2 class="section-heading text-white" id="test-data-dump"></h2>
                 <hr class="light my-4">
-                <p class="text-faded mb-4">Start Bootstrap has everything you need to get your new website up and
-                    running in no time! All of the templates and themes on Start Bootstrap are open source, free to
-                    download, and easy to use. No strings attached!</p>
-                <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
-            </div>
+                <p class="text-faded mb-4">
+        <ul style="list-style: none;">
+        <div class="col-lg-12 col-md-2 text-center">
+            <h2>Getting Started</h2>
+            <li>Search any city and view their demographics below </li>
+                        <li>All information and statistics are from the United States Census Bureau.</li>
+                        <li>More detailed information about major cities can also be seen below!</li>
+                        <br>
+        <p><a class="btn btn-light btn-xl js-scroll-trigger" href="#services">View Data</a></p>
+                    
+                    
+                    </ul>
+                    </p>
+     
+            </div></div>
         </div>
     </section>
     <section class="bg-primary">
@@ -244,7 +252,7 @@
             <div class="row">
 
                 <canvas id="myChart" width="400" height="400"></canvas>
-
+<!--
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box mt-5 mx-auto">
                         <i class="fas fa-4x fa-gem text-primary mb-3 sr-icon-1"></i>
@@ -272,7 +280,7 @@
                         <h3 class="mb-3">Made with Love</h3>
                         <p class="text-muted mb-0">You have to make your websites with love these days!</p>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
     </section>
@@ -286,11 +294,7 @@
 <div class="portfolio-box-caption background-white">
                             <div class="portfolio-box-caption-content">
                                 <div id="timezoneLA" class="project-category text-faded">
-                                    <!-- here too -->
-                                    <!-- hmm -- in this case we don't need to add or append any new HTML, we just need to change the text of some HTML.
-                                    so no need for .append()fortnite btw we can just use .text() -->
-
-                                    Category
+                                    12:00:00 pm
                                 </div>
                                 <div class="project-name">
                                     <!-- right here ro tip press ctrl+/ to comment-->
@@ -306,7 +310,7 @@
 <div class="portfolio-box-caption background-white">
                             <div class="portfolio-box-caption-content">
                                 <div id="timezoneNY" class="project-category text-faded">
-                                    Category
+                                12:00:00 pm
                                 </div>
                                 <div class="project-name">
                                     New York
@@ -321,7 +325,7 @@
 <div class="portfolio-box-caption background-white">
                             <div class="portfolio-box-caption-content">
                                 <div id = "timezoneChicago" class="project-category text-faded">
-                                    Category
+                                    12:00:00 pm
                                 </div>
                                 <div class="project-name">
                                     Chicago
@@ -333,13 +337,13 @@
                 <div class="col-lg-4 col-sm-6">
                     <a class="portfolio-box" href="../bootstrap/img/portfolio/fullsize/4.jpg">
                         <img class="img-fluid" src="../bootstrap/img/portfolio/thumbnails/4.jpg" alt="">
-<div class="portfolio-box-caption background-white">
+                    <div class="portfolio-box-caption background-white">
                             <div class="portfolio-box-caption-content">
-                                <div id = "timezoneHou" class="project-category text-faded">
-                                    Category
+                                <div id = "timezoneSea" class="project-category text-faded">
+                                    12:00:00 pm
                                 </div>
                                 <div class="project-name">
-                                    Houston
+                                    Seattle
                                 </div>
                             </div>
                         </div>
@@ -348,13 +352,13 @@
                 <div class="col-lg-4 col-sm-6">
                     <a class="portfolio-box" href="../bootstrap/img/portfolio/fullsize/5.jpg">
                         <img class="img-fluid" src="../bootstrap/img/portfolio/thumbnails/5.jpg" alt="">
-<div class="portfolio-box-caption background-white">
+                <div class="portfolio-box-caption background-white">
                             <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
+                                <div id="timezoneSanta" class="project-category text-faded">
+                                    12:00:00 pm
                                 </div>
                                 <div class="project-name">
-                                    Project Name
+                                    Santa Monica
                                 </div>
                             </div>
                         </div>
@@ -365,11 +369,11 @@
                         <img class="img-fluid" src="../bootstrap/img/portfolio/thumbnails/6.jpg" alt="">
 <div class="portfolio-box-caption background-white">
                             <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
+                                <div class id="timezoneBost" ="project-category text-faded">
+                                    12:00:00 pm
                                 </div>
                                 <div class="project-name">
-                                    Project Name
+                                    Boston
                                 </div>
                             </div>
                         </div>
@@ -379,33 +383,26 @@
         </div>
     </section>
 
-    <section class="bg-dark text-white">
-        <div class="container text-center">
-            <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
-            <a class="btn btn-light btn-xl sr-button" href="http://startbootstrap.com/template-overviews/creative/">Download
-                Now!</a>
-        </div>
-    </section>
+
 
     <section id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center">
-                    <h2 class="section-heading">Let's Get In Touch!</h2>
+                    <h2 class="section-heading">Want more information?</h2>
                     <hr class="my-4">
-                    <p class="mb-5">Ready to start your next project with us? That's great! Give us a call or send us
-                        an email and we will get back to you as soon as possible!</p>
+                    <p class="mb-5">Contact the Official US Census Bureau Below</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-4 ml-auto text-center">
                     <i class="fas fa-phone fa-3x mb-3 sr-contact-1"></i>
-                    <p>123-456-6789</p>
+                    <p>1-800-123-4567</p>
                 </div>
                 <div class="col-lg-4 mr-auto text-center">
                     <i class="fas fa-envelope fa-3x mb-3 sr-contact-2"></i>
                     <p>
-                        <a href="mailto:your-email@your-domain.com">feedback@startbootstrap.com</a>
+                        <a href="mailto:your-email@your-domain.com">USCensusBureau.gmail.com</a>
                     </p>
                 </div>
             </div>
