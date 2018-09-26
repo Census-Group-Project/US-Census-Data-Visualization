@@ -7,6 +7,7 @@ USE census_db;
 CREATE TABLE censusdata
 (
   id INT NOT NULL AUTO_INCREMENT,
+  reducedName TEXT(100) NULL,
   areaname TEXT(100) NULL,
   stateCounty INT(40) NULL,
   totalPopulation INT(40) NULL,
@@ -49,5 +50,12 @@ CREATE TABLE censusdata
   percentageRep2000 INT(40) NULL,
   percentageRep2004 INT(40) NULL,
   percentageRep2008 INT(40) NULL,
+  whitePopulation INT(40) NULL,
+  blackPopulation INT(40) NULL,
+  americanIndianAndAlaskanNativePopulation INT(40) NULL,
+  asianPopulation INT(40) NULL,
+  nativeHawaiianAndPacificIslanderPopulation INT(40) NULL,
+  twoOrMoreRacesPopulation INT(40) NULL,
+  hispanicOrLatinoPopulation INT(40) NULL,
   PRIMARY KEY (id)
 );

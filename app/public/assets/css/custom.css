@@ -74,7 +74,7 @@ a {
     padding: 15px;
   }
   #search input, #search .ac {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 
@@ -524,6 +524,7 @@ body {
     display: none;
 }
 
+
 .project-name {
   font-size: 40px !important;
   font-family: Georgia, 'Times New Roman', Times, serif !important;
@@ -535,3 +536,75 @@ body {
     
 }
 /*the text size isnt changing reeeeeeeeeeeeee hmm THiNkINg lets check f12 lol so it looks like something else was OVERWRITING our style. 
+
+.googleFontOpenSans {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Times New Roman font unique attribute */
+.timesNewRomanText {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Reducing padding bottom for about section */
+#about {
+  padding-top: 50px;
+  padding-bottom: 0px;
+}
+
+/* Need room between the Racial Demographics chart title and the pie chart */
+.customPieChart {
+  /* padding-top: 200px; */
+}
+
+#racialDemographicsSubtitleStyle {
+  padding-top: 50px;
+}
+ /* Styling for About Heading */
+.googleFontsRaleway {
+  font-family: 'Raleway', sans-serif;
+}
+#aboutHeading {
+  padding-bottom: 0px;
+}
+#aboutDescription {
+  padding-bottom: 0px;
+}
+/* Create necessary left padding for mobile display */
+@media only screen and (max-width: 600px) {
+  #aboutDescription {
+    padding-left: 10px;
+  }
+}
+#shrinkAboutContainer {
+  padding-top: 50px;
+  padding-bottom: 0px;
+}
+
+.googleFontsNoto {
+  font-family: 'Noto Serif JP', sans-serif;
+  font-size: 14pt;
+}
+
+#pushPieChartDown {
+  padding-bottom: 400px;
+}
+
+/* #pushCustomPieChartDown {
+  padding-bottom: 200px;
+} */
+
+/* Reducing the padding of the first graphical section */
+#firstGraphicalSection {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+/* Changing bar display color of General Population Statistics graphes */
+.bar-wrap {
+  border: 1px solid darkgrey;
+}
+
+.bar-fill {
+  background-color: rgb(202, 50, 0);
+}
