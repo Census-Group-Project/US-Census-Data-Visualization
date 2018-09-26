@@ -7,6 +7,7 @@ USE census_db;
 CREATE TABLE censusdata
 (
   id INT NOT NULL AUTO_INCREMENT,
+  reducedName TEXT(100) NULL,
   areaname TEXT(100) NULL,
   stateCounty INT(40) NULL,
   totalPopulation INT(40) NULL,
