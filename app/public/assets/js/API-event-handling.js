@@ -57,7 +57,7 @@ $("#search-btn").on("click", function () {
 
       // General Population Statistics
       // We need to calculate the percentage of pop under 18, so we'll divide total amount of ppl under 18 by the total population
-      const mathPercentPopulationUnder18 = Math.round((data.populationUnder18 / data.totalPopulation) * 100);
+      const mathPercentPopulationUnder18 = Math.round(data.populationUnder18 / data.totalPopulation);
       $("#textPercentPopulationUnder18").append(`<h4 class="removeCustomStat">${mathPercentPopulationUnder18}%</h4>`);
       $("#graphPercentPopulationUnder18").append(`<span class="bar-fill" style="width:${mathPercentPopulationUnder18}%;"></span>`);
 
@@ -65,7 +65,7 @@ $("#search-btn").on("click", function () {
       $("#graphPercentPopulationOver65").append(`<span class="bar-fill" style="width:${data.populationOver65}%;"></span>`);
 
       // Calculate a city's percentage of families below poverty level
-      const mathFamiliesBelowPovertyLevel = (Math.round(data.familiesBelowPovertyLevel / data.totalPopulation * 1000));
+      const mathFamiliesBelowPovertyLevel = Math.round(data.familiesBelowPovertyLevel / data.totalPopulation);
       $("#textFamiliesBelowPovertyLevel").append(`<h4 class="removeCustomStat">${mathFamiliesBelowPovertyLevel}%</h4>`);
       $("#graphFamiliesBelowPovertyLevel").append(`<span class="bar-fill" style="width:${mathFamiliesBelowPovertyLevel}%;"></span>`);
       
@@ -379,49 +379,48 @@ $("#search-btn").on("click", function () {
         console.log(response);
       });
       
-      // Changing the income data into figures compatible with the chart
-      const graphIncomeLessThan10K = data.incomeLessThan10K / 1000000;
-      const graphIncomeBtw10And15K = data.incomeBtw10And15K / 1000000;
-      const graphIncomeBtw15And20K = data.incomeBtw15And20K / 1000000;
-      const graphIncomeBtw20And25K = data.incomeBtw20And25K / 1000000;
-      const graphIncomeBtw25And30K = data.incomeBtw25And30K / 1000000;
-      const graphIncomeBtw30And35K = data.incomeBtw30And35K / 1000000;
-      const graphIncomeBtw35And40K = data.incomeBtw35And40K / 1000000;
-      const graphIncomeBtw40And45K = data.incomeBtw40And45K / 1000000;
-      const graphIncomeBtw45And50K = data.incomeBtw45And50K / 1000000;
-      const graphIncomeBtw50And60K = data.incomeBtw50And60K / 1000000;
-      const graphIncomeBtw60And75K = data.incomeBtw60And75K / 1000000;
-      const graphIncomeBtw75And100K = data.incomeBtw75And100K / 1000000;
-      const graphIncomeBtw100And125K = data.incomeBtw100And125K / 1000000;
-      const graphIncomeBtw125And150K = data.incomeBtw125And150K / 1000000;
-      const graphIncomeBtw150And200K = data.incomeBtw150And200K / 1000000;
-      const graphIncome200Plus = data.income200Plus / 1000000;
       
-
-
       var ctx = document.getElementById("myChartCustom").getContext('2d');
       var myChartCustom = new Chart(ctx, {
         type: 'bar',
         data: {
             labels: ["Less Than $10K", "$10K - $15K", "$15K - $20K", "$20K - $25K", "$30K - $35K", "$35K - $40K", "$40K - $45K", "$45K - $50K", "$50K - $60K", "$60K - $75K", "$75K - $100K", "$100K - $125K", "$125K - $150K", "$150K - $200K", "$200K+"],
             datasets: [{
-                label: 'Number of Families in Income Category (in millions)',
-                data: [graphIncomeLessThan10K, graphIncomeBtw10And15K, graphIncomeBtw15And20K, graphIncomeBtw20And25K, graphIncomeBtw25And30K, graphIncomeBtw30And35K, graphIncomeBtw35And40K, graphIncomeBtw40And45K, graphIncomeBtw45And50K, graphIncomeBtw50And60K, graphIncomeBtw60And75K, graphIncomeBtw75And100K, graphIncomeBtw100And125K, graphIncomeBtw125And150K, graphIncomeBtw150And200K, graphIncome200Plus],
+                label: 'Total Number of Families in Income Category',
+                data: [data.incomeLessThan10K, data.incomeBtw10And15K, data.incomeBtw15And20K, data.incomeBtw20And25K, data.incomeBtw25And30K, data.incomeBtw30And35K, data.incomeBtw35And40K, data.incomeBtw40And45K, data.incomeBtw45And50K, data.incomeBtw50And60K, data.incomeBtw60And75K, data.incomeBtw75And100K, data.incomeBtw100And125K, data.incomeBtw125And150K, data.incomeBtw150And200K, data.income200Plus],
                 backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
+                    'hsl(120, 100%, 50%)',
+                    'hsl(120, 94%, 50%)',
+                    'hsl(120, 88%, 50%)',
+                    'hsl(120, 82%, 50%)',
+                    'hsl(120, 76%, 50%)',
+                    'hsl(120, 70%, 50%)',
+                    'hsl(120, 64%, 50%)',
+                    'hsl(120, 58%, 50%)',
+                    'hsl(120, 52%, 50%)',
+                    'hsl(120, 46%, 50%)',
+                    'hsl(120, 40%, 50%)',
+                    'hsl(120, 34%, 50%)',
+                    'hsl(120, 28%, 50%)',
+                    'hsl(120, 22%, 50%)',
+                    'hsl(120, 16%, 50%)',
                 ],
                 borderColor: [
-                    'rgba(255,99,132,1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
                     'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(75, 192, 192, 1)'
                 ],
                 borderWidth: 1
             }]
@@ -720,7 +719,7 @@ var myChart = new Chart(ctx, {
       labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
       datasets: [{
           label: '# of Votes',
-          data: [12, 19, 3, 5, 2, 3],
+          data: [12, 18, 3, 5, 2, 3],
           backgroundColor: [
               'rgba(255, 99, 132, 0.2)',
               'rgba(54, 162, 235, 0.2)',
