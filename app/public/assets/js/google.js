@@ -29,7 +29,7 @@ function setTimezoneTiles(loc, locNY, locChi, locH, locSan, locBost) {
     callApiAndUpdateText(apicall2, "timezoneChicago", timestamp);
     callApiAndUpdateText(apicall3, "timezoneSea", timestamp);
     callApiAndUpdateText(apicall4, "timezoneSanta", timestamp);
-     callApiAndUpdateText(apicall5, "timezoneBost", timestamp);
+    callApiAndUpdateText(apicall5, "timezoneBost", timestamp);
  
     
 }
@@ -63,6 +63,7 @@ $("#search-btn").on("click", function () {
     var locH = '32.7767, -96.7970';
     var locSan = '34.0195, -118.4912';
     var locBost= '42.3601, -71.0589';
+
     // call our function, which is going to MAKE THE API REQUEST, and UPDATE THE TEXT
     setTimezoneTiles(loc, locNY, locChi, locH, locSan, locBost); 
 
