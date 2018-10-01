@@ -10,6 +10,7 @@ $("#search-btn").on("click", function () {
   $("#firstGraphicalSection").show();
   $("#myChartCustom").show();
   $("div#mobileHideForAutocomplete").removeAttr('id');
+  $("#mobileOnly").remove();
 
   // Saves the search value from the city-search bar into a variable.
   let searchedCity = $("#city-search")

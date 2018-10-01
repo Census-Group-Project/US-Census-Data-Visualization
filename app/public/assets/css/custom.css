@@ -716,8 +716,20 @@ input[type=submit] {
   padding-top: 15px;
 }
 
+
+#mobileText {
+  padding-top: 25px;
+}
+
+#mobileOnly {
+  display: none;
+}
+
 @media only screen and (max-width: 550px) {
   #mobileHideForAutocomplete {
     display: none;
+  }
+  #mobileOnly {
+    display: block;
   }
 }
