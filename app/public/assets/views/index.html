@@ -95,367 +95,281 @@
         </div>
     </header>
 
-    <!--  <section class="bg-primary" id="about">
-        <div class="container" id="shrinkAboutContainer">
-            <div class="row">
+    <div id="mobileHideForAutocomplete">
+        <section class="bg-primary" id="firstGraphicalSection">
+            <!-- Display that shows what city the user searched for -->
+            <div class="col-lg-6 mx-auto text-center googleFontsRaleway" id="displayCityName"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 mx-auto text-center">
+                        <h1 id="racialDemographicsSubtitleStyle" class="timesNewRomanText">Racial Demographics</h1>
 
-              Test div for data dump -- TO BE REMOVED BEFORE DEPLOYMENT!
-                 <div id="test-data-dump"></div> 
-                <h2 class="section-heading text-white" id="test-data-dump"></h2>
-                <hr class="light my-4">
-                <p class="text-faded mb-4"> -->
-    <!--  <ul style="list-style: none;">
-        <div class="col-lg-12 col-md-2 text-center">
-            <h2>Getting Started</h2>
-            <li>Search any city and view their demographics below </li>
-                        <li>All information and statistics are from the United States Census Bureau.</li>
-                        <li>More detailed information about major cities can also be seen below!</li>
+                        <!-- Creating row and col-lg-6 within this existing col-lg-6 to give the pie chart a different plane than its accompanying text, the unique id is used to push it down -->
+                        <div class="row">
+
+                            <div class="col-lg-6 mx-auto text-center">
+
+                                <h1 id="pushPieChartDown"></h1>
+                                <!-- Start Default Pie Chart -->
+                                <div id="pieChart" class="chart customPieChart">
+                                    <!-- <h1 id="pushCustomPieChartDown"></h1> -->
+                                </div>
+                                <div class="customPieChart"></div>
+                                <!-- End Default Pie Chart -->
+                            </div>
+                        </div>
+
+                        <div id="rowPieChartEditing" class="googleFontOpenSans">
+                            <h3>Percentage of the Population</h3>
+                            <h6 id="graphWhitePopulation">White alone: </h6>
+                            <h6 id="graphBlackPopulation">Black alone: </h6>
+                            <h6 id="graphAsianPopulation">Asian alone: </h6>
+                            <h6 id="graphHispanicOrLatinoPopulation">Hispanic or Latino alone:</h6>
+                            <h6 id="graphAmericanIndianAndAlaskanNativePopulation">American Indian and Alaskan Native
+                                alone: </h6>
+                            <h6 id="graphNativeHawaiianAndPacificIslanderPopulation">Native Hawaiian and Pacific
+                                Islander
+                                alone: </h6>
+                            <h6 id="graphTwoOrMoreRacesPopulation">Two or More Races: </h6>
+                        </div>
                         <br>
-        <p><a class="btn btn-light btn-xl js-scroll-trigger" href="#services">View Data</a></p>
-                
-                    </ul>
-                    </p>
-                -->
-    </div>
-    </div>
-    </div>
-    </section>
-    <section class="bg-primary" id="firstGraphicalSection">
-        <div class="container">
-            <div class="row">
+                        <br>
 
 
-
-                <div class="col-lg-6 mx-auto text-center">
-                    <h1 id="racialDemographicsSubtitleStyle" class="timesNewRomanText">Racial Demographics</h1>
-
-                    <!-- Creating row and col-lg-6 within this existing col-lg-6 to give the pie chart a different plane than its accompanying text, the unique id is used to push it down -->
-                    <div class="row">
-
-                        <div class="col-lg-6 mx-auto text-center">
-
-                            <h1 id="pushPieChartDown"></h1>
-                            <!-- Start Default Pie Chart -->
-                            <div id="pieChart" class="chart customPieChart">
-                                <!-- <h1 id="pushCustomPieChartDown"></h1> -->
-                            </div>
-                            <div class="customPieChart"></div>
-                            <!-- End Default Pie Chart -->
-                        </div>
                     </div>
 
-                    <div id="rowPieChartEditing" class="googleFontOpenSans">
-                        <h3>Percentage of the Population</h3>
-                        <h6 id="graphWhitePopulation">White alone: </h6>
-                        <h6 id="graphBlackPopulation">Black alone: </h6>
-                        <h6 id="graphAsianPopulation">Asian alone: </h6>
-                        <h6 id="graphHispanicOrLatinoPopulation">Hispanic or Latino alone:</h6>
-                        <h6 id="graphAmericanIndianAndAlaskanNativePopulation">American Indian and Alaskan Native
-                            alone: </h6>
-                        <h6 id="graphNativeHawaiianAndPacificIslanderPopulation">Native Hawaiian and Pacific Islander
-                            alone: </h6>
-                        <h6 id="graphTwoOrMoreRacesPopulation">Two or More Races: </h6>
+
+                    <div class="col-lg-6 mx-auto text-center timesNewRomanText">
+                        <h1 id="generalPopulationStatisticsHeading" class="timesNewRomanText">General Population
+                            Statistics</h1>
+
+                        <!-- Start Default Bar Graph -->
+                        <ul id="shiftGPSContentUp" class="bar-graph googleFontOpenSans">
+                            <li>
+                                <h4>Mean Family Income<p id="textMeanFamilyIncome"></p>
+                                </h4>
+                            </li>
+                            <li>
+                                <h4>Median Family Income<p id="textMedianFamilyIncome"></p>
+                                </h4>
+                            </li>
+                            <li>
+                                <h4>Unemployment Rate (2010)<p id="textUnemploymentRate2010"></p>
+                                </h4>
+                                <div id="graphUnemploymentRate2010" class="bar-wrap"><span class="bar-fill" style="width: 0%;"></span></div>
+                            </li>
+                            <li>
+                                <h4>Percentage of the Population Above Age 65<p id="textPercentPopulationOver65"></p>
+                                    </p>
+                                </h4>
+                                <div id="graphPercentPopulationOver65" class="bar-wrap"><span class="bar-fill" style="width: 0%;"></span></div>
+                            </li>
+                        </ul>
+
+                        <!-- End Default Bar Graph -->
                     </div>
-                    <br>
-                    <br>
-
-
-                </div>
-
-
-                <div class="col-lg-6 mx-auto text-center timesNewRomanText">
-                    <h1 id="generalPopulationStatisticsHeading" class="timesNewRomanText">General Population Statistics</h1>
-
-                    <!-- Start Default Bar Graph -->
-                    <ul id="shiftGPSContentUp"class="bar-graph googleFontOpenSans">
-                        <!-- <li> -->
-                        <!-- <h4>Percentage of the Population Under Age 18<p id="textPercentPopulationUnder18"></p>
-                                </p>
-                            </h4> -->
-                        <!-- <div id="graphPercentPopulationUnder18" class="bar-wrap"><span class="bar-fill" style="width: 0%;"></span></div> -->
-                        <!-- </li> -->
-                        <!-- <li> -->
-                        <!-- <h4>Percentage of Families Below Poverty Level<p id="textFamiliesBelowPovertyLevel"></p>
-                            </h4>
-                            <div id="graphFamiliesBelowPovertyLevel" class="bar-wrap"><span class="bar-fill" style="width: 0%;"></span></div> -->
-                        <!-- </li> -->
-                        <li>
-                            <h4>Mean Family Income<p id="textMeanFamilyIncome"></p>
-                            </h4>
-                        </li>
-                        <li>
-                            <h4>Median Family Income<p id="textMedianFamilyIncome"></p>
-                            </h4>
-                        </li>
-                        <li>
-                            <h4>Unemployment Rate (2010)<p id="textUnemploymentRate2010"></p>
-                            </h4>
-                            <div id="graphUnemploymentRate2010" class="bar-wrap"><span class="bar-fill" style="width: 0%;"></span></div>
-                        </li>
-                        <li>
-                            <h4>Percentage of the Population Above Age 65<p id="textPercentPopulationOver65"></p>
-                                </p>
-                            </h4>
-                            <div id="graphPercentPopulationOver65" class="bar-wrap"><span class="bar-fill" style="width: 0%;"></span></div>
-                        </li>
-                    </ul>
-
-                    <!-- End Default Bar Graph -->
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="services">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h1 class="section-heading timesNewRomanText">Presidential Party Nominee Vote Percentage</h1>
-                    <hr class="my-4">
-                </div>
-            </div>
-        </div>
-        <!-- Start US Default Bar Graph 2 -->
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div id="bar-chart">
-                        <div class="graph">
-                            <ul class="x-axis">
-                                <li><span>1992</span></li>
-                                <li><span>1996</span></li>
-                                <li><span>2000</span></li>
-                                <li><span>2004</span></li>
-                                <li><span>2008</span></li>
-                            </ul>
-                            <ul class="y-axis">
-                                <li><span>100%</span></li>
-                                <li><span>75%</span></li>
-                                <li><span>50%</span></li>
-                                <li><span>25%</span></li>
-                                <li><span>0</span></li>
-                            </ul>
-                            <div class="bars">
-                                <div class="bar-group" id="repVote1992">
-                                    <div id="demVote1992"></div>
-                                    <!-- <div class="bar bar-1 stat-1" style="height: 51%;"> -->
-                                    <!-- <span></span> -->
-                                    <!-- </div> -->
-                                    <!-- <div class="bar bar-3 stat-3" style="height: 13%;">
-                                        <span>1040</span>
-                                    </div> -->
-                                </div>
-                                <div class="bar-group" id="repVote1996">
-                                    <div id="demVote1996"></div>
-                                    <!-- <div class="bar bar-4 stat-1" style="height: 76%;">
-                                        <span>6080</span>
-                                    </div>
-                                    <div class="bar bar-5 stat-2" style="height: 86%;">
-                                        <span>6880</span>
-                                    </div>
-                                    <div class="bar bar-6 stat-3" style="height: 22%;">
-                                        <span>1760</span>
-                                </div> -->
-                                </div>
-                                <div class="bar-group" id="repVote2000">
-                                    <div id="demVote2000"></div>
-                                    <!-- <div class="bar bar-7 stat-1" style="height: 78%;">
-                                        <span>6240</span>
-                                    </div>
-                                    <div class="bar bar-8 stat-2" style="height: 72%;">
-                                        <span>5760</span>
-                                    </div>
-                                    <div class="bar bar-9 stat-3" style="height: 36%;">
-                                        <span>2880</span>
-                                    </div> -->
-                                </div>
-                                <div class="bar-group" id="repVote2004">
-                                    <div id="demVote2004"></div>
-                                    <!-- <div class="bar bar-10 stat-1" style="height: 44%;">
-                                        <span>3520</span>
-                                    </div>
-                                    <div class="bar bar-11 stat-2" style="height: 64%;">
-                                        <span>5120</span>
-                                    </div>
-                                    <div class="bar bar-12 stat-3" style="height: 59%">
-                                        <span>4720</span>
-                                    </div> -->
-                                </div>
-                                <div class="bar-group" id="repVote2008">
-                                    <div id="demVote2008"></div>
-                                    <!-- <div class="bar bar-13 stat-1" style="height: 28%;">
-                                        <span>2240</span>
-                                    </div>
-                                    <div class="bar bar-14 stat-2" style="height: 33%;">
-                                        <span>2640</span>
-                                    </div>
-                                    <div class="bar bar-15 stat-3" style="height: 94%;">
-                                        <span>7520</span>
-                                    </div> -->
-                                </div>
-                            </div>
-                        </div>
+        <section id="services">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1 class="section-heading timesNewRomanText">Presidential Party Nominee Vote Percentage</h1>
+                        <hr class="my-4">
                     </div>
-
-                    <h1 class="section-heading timesNewRomanText">Income Distribution</h1>
-                    <hr class="my-4">
                 </div>
             </div>
-        </div>
-        <!-- End US Default Bar Graph 2 -->
-        <div class="container">
-            <div class="row">
-                <!-- Start Income Distribution Graph -->
-                <!-- Default graph before searching a city -->
-                <canvas id="myChart" width="400" height="300"></canvas>
-                <!-- Custom city graph -->
-                <canvas id="myChartCustom" width="400" height="300"></canvas>
-                <!-- End Income Distribution Graph -->
-            </div>
-        </div>
-    </section>
+            <!-- Start US Default Bar Graph 2 -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div id="bar-chart">
+                            <div class="graph">
+                                <ul class="x-axis">
+                                    <li><span>1992</span></li>
+                                    <li><span>1996</span></li>
+                                    <li><span>2000</span></li>
+                                    <li><span>2004</span></li>
+                                    <li><span>2008</span></li>
+                                </ul>
+                                <ul class="y-axis">
+                                    <li><span>100%</span></li>
+                                    <li><span>75%</span></li>
+                                    <li><span>50%</span></li>
+                                    <li><span>25%</span></li>
+                                    <li><span>0</span></li>
+                                </ul>
+                                <div class="bars">
+                                    <div class="bar-group" id="repVote1992">
+                                        <div id="demVote1992"></div>
+                                    </div>
+                                    <div class="bar-group" id="repVote1996">
+                                        <div id="demVote1996"></div>
+                                    </div>
+                                    <div class="bar-group" id="repVote2000">
+                                        <div id="demVote2000"></div>
+                                    </div>
+                                    <div class="bar-group" id="repVote2004">
+                                        <div id="demVote2004"></div>
+                                    </div>
+                                    <div class="bar-group" id="repVote2008">
+                                        <div id="demVote2008"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-    <section class="p-0" id="portfolio">
-        <div class="container-fluid p-0">
-            <div class="row no-gutters no">
-                <div class="col-lg-4 col-sm-6">
-                    <a class="portfolio-box" href="https://www.census.gov/quickfacts/fact/table/losangelescountycalifornia/PST045217"
-                        target="_blank">
-                        <img class="img-fluid" src="../bootstrap/img/portfolio/thumbnails/1.jpg" alt="">
-                        <div class="portfolio-box-caption background-white">
-                            <div class="portfolio-box-caption-content">
-                                <div id="timezoneLA" class="project-category text-faded">
-                                    12:00:00 pm
-                                </div>
-                                <div class="project-name">
-                                    <!-- right here ro tip press ctrl+/ to comment-->
-                                    Los Angeles
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a class="portfolio-box" href="https://www.census.gov/quickfacts/ny" target="_blank">
-                        <img class="img-fluid" src="../bootstrap/img/portfolio/thumbnails/2.jpg" alt="">
-                        <div class="portfolio-box-caption background-white">
-                            <div class="portfolio-box-caption-content">
-                                <div id="timezoneNY" class="project-category text-faded">
-                                    12:00:00 pm
-                                </div>
-                                <div class="project-name">
-                                    New York
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a class="portfolio-box" href="https://www.census.gov/quickfacts/chicagocityillinois" target="_blank">
-                        <img class="img-fluid" src="../bootstrap/img/portfolio/thumbnails/3.jpg" alt="">
-                        <div class="portfolio-box-caption background-white">
-                            <div class="portfolio-box-caption-content">
-                                <div id="timezoneChicago" class="project-category text-faded">
-                                    12:00:00 pm
-                                </div>
-                                <div class="project-name">
-                                    Chicago
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a class="portfolio-box" href="https://www.census.gov/quickfacts/fact/table/seattlecitywashington,US/PST045217"
-                        target="_blank">
-                        <img class="img-fluid" src="../bootstrap/img/portfolio/thumbnails/4.jpg" alt="">
-                        <div class="portfolio-box-caption background-white">
-                            <div class="portfolio-box-caption-content">
-                                <div id="timezoneSea" class="project-category text-faded">
-                                    12:00:00 pm
-                                </div>
-                                <div class="project-name">
-                                    Seattle
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <!-- commenting this to keep it for later -->
-                    <!-- <a class="portfolio-box" href="../bootstrap/img/portfolio/fullsize/5.jpg"> -->
-                    <a class="portfolio-box" href="https://www.census.gov/quickfacts/fact/table/santamonicacitycalifornia,US/PST045217"
-                        target="_blank">
-                        <img class="img-fluid" src="../bootstrap/img/portfolio/thumbnails/5.jpg" alt="" />
-
-                        <div class="portfolio-box-caption background-white">
-                            <div class="portfolio-box-caption-content">
-                                <div id="timezoneSanta" class="project-category text-faded">
-                                    12:00:00 pm
-                                </div>
-                                <div class="project-name">
-                                    Santa Monica
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a class="portfolio-box" href="https://www.census.gov/quickfacts/bostoncitymassachusetts" target="_blank">
-                        <img class="img-fluid" src="../bootstrap/img/portfolio/thumbnails/6.jpg" alt="">
-                        <div class="portfolio-box-caption background-white">
-                            <div class="portfolio-box-caption-content">
-                                <div class id="timezoneBost"="project-category text-faded">
-                                    12:00:00 pm
-                                </div>
-                                <div class="project-name">
-                                    Boston
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+                        <h1 class="section-heading timesNewRomanText">Income Distribution</h1>
+                        <hr class="my-4">
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-
-
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto text-center">
-                    <h2 class="section-heading">Want more information?</h2>
-                    <hr class="my-4">
-                    <p class="mb-5">Contact the Official US Census Bureau Below</p>
+            <!-- End US Default Bar Graph 2 -->
+            <div class="container">
+                <div class="row">
+                    <!-- Start Income Distribution Graph -->
+                    <!-- Default graph before searching a city -->
+                    <canvas id="myChart" width="400" height="300"></canvas>
+                    <!-- Custom city graph -->
+                    <canvas id="myChartCustom" width="400" height="300"></canvas>
+                    <!-- End Income Distribution Graph -->
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-4 ml-auto text-center">
-                    <i class="fas fa-phone fa-3x mb-3 sr-contact-1"></i>
-                    <p>1-800-123-4567</p>
-                </div>
-                <div class="col-lg-4 mr-auto text-center">
-                    <i class="fas fa-envelope fa-3x mb-3 sr-contact-2"></i>
-                    <p>
-                        <a href="mailto:your-email@your-domain.com">USCensusBureau@gmail.com</a>
-                    </p>
+        </section>
+
+        <section class="p-0" id="portfolio">
+            <div class="container-fluid p-0">
+                <div class="row no-gutters no">
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="https://www.census.gov/quickfacts/fact/table/losangelescountycalifornia/PST045217"
+                            target="_blank">
+                            <img class="img-fluid" src="../bootstrap/img/portfolio/thumbnails/1.jpg" alt="">
+                            <div class="portfolio-box-caption background-white">
+                                <div class="portfolio-box-caption-content">
+                                    <div id="timezoneLA" class="project-category text-faded">
+                                        12:00:00 pm
+                                    </div>
+                                    <div class="project-name">
+                                        <!-- right here ro tip press ctrl+/ to comment-->
+                                        Los Angeles
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="https://www.census.gov/quickfacts/ny" target="_blank">
+                            <img class="img-fluid" src="../bootstrap/img/portfolio/thumbnails/2.jpg" alt="">
+                            <div class="portfolio-box-caption background-white">
+                                <div class="portfolio-box-caption-content">
+                                    <div id="timezoneNY" class="project-category text-faded">
+                                        12:00:00 pm
+                                    </div>
+                                    <div class="project-name">
+                                        New York
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="https://www.census.gov/quickfacts/chicagocityillinois" target="_blank">
+                            <img class="img-fluid" src="../bootstrap/img/portfolio/thumbnails/3.jpg" alt="">
+                            <div class="portfolio-box-caption background-white">
+                                <div class="portfolio-box-caption-content">
+                                    <div id="timezoneChicago" class="project-category text-faded">
+                                        12:00:00 pm
+                                    </div>
+                                    <div class="project-name">
+                                        Chicago
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="https://www.census.gov/quickfacts/fact/table/seattlecitywashington,US/PST045217"
+                            target="_blank">
+                            <img class="img-fluid" src="../bootstrap/img/portfolio/thumbnails/4.jpg" alt="">
+                            <div class="portfolio-box-caption background-white">
+                                <div class="portfolio-box-caption-content">
+                                    <div id="timezoneSea" class="project-category text-faded">
+                                        12:00:00 pm
+                                    </div>
+                                    <div class="project-name">
+                                        Seattle
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <!-- commenting this to keep it for later -->
+                        <!-- <a class="portfolio-box" href="../bootstrap/img/portfolio/fullsize/5.jpg"> -->
+                        <a class="portfolio-box" href="https://www.census.gov/quickfacts/fact/table/santamonicacitycalifornia,US/PST045217"
+                            target="_blank">
+                            <img class="img-fluid" src="../bootstrap/img/portfolio/thumbnails/5.jpg" alt="" />
+
+                            <div class="portfolio-box-caption background-white">
+                                <div class="portfolio-box-caption-content">
+                                    <div id="timezoneSanta" class="project-category text-faded">
+                                        12:00:00 pm
+                                    </div>
+                                    <div class="project-name">
+                                        Santa Monica
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="https://www.census.gov/quickfacts/bostoncitymassachusetts"
+                            target="_blank">
+                            <img class="img-fluid" src="../bootstrap/img/portfolio/thumbnails/6.jpg" alt="">
+                            <div class="portfolio-box-caption background-white">
+                                <div class="portfolio-box-caption-content">
+                                    <div class id="timezoneBost"="project-category text-faded">
+                                        12:00:00 pm
+                                    </div>
+                                    <div class="project-name">
+                                        Boston
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- OLD Search Bar ... -->
-    <!-- <div class="row">
-        <div class="search">
-            <form class="search" method="POST">
-                <input type="text" id="city-search" placeholder="Search Any American City">
-                <button id="search-btn">
-                    <div class="icon"></div>
-                </button>
-            </form>
-        </div>
-    </div> -->
+
+
+        <section id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <h2 class="section-heading">Want more information?</h2>
+                        <hr class="my-4">
+                        <p class="mb-5">Contact the Official US Census Bureau Below</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 ml-auto text-center">
+                        <i class="fas fa-phone fa-3x mb-3 sr-contact-1"></i>
+                        <p>1-800-123-4567</p>
+                    </div>
+                    <div class="col-lg-4 mr-auto text-center">
+                        <i class="fas fa-envelope fa-3x mb-3 sr-contact-2"></i>
+                        <p>
+                            <a href="mailto:your-email@your-domain.com">USCensusBureau@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <!-- Bootstrap core JavaScript -->
     <script src="../bootstrap/vendor/jquery/jquery.min.js"></script>

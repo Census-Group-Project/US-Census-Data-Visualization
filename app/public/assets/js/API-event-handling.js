@@ -9,6 +9,7 @@ $("#search-btn").on("click", function () {
   // Showing the search results after autocomplete is no longer needed
   $("#firstGraphicalSection").show();
   $("#myChartCustom").show();
+  $("div#mobileHideForAutocomplete").removeAttr('id');
 
   // Saves the search value from the city-search bar into a variable.
   let searchedCity = $("#city-search")
@@ -36,11 +37,13 @@ $("#search-btn").on("click", function () {
     // log the data to our console
     console.log(data);
     // empty test-data-dump section before adding new content
-    $("#test-data-dump").empty();
+    $("#displayCityName").empty();
     // if the data is not found in the DB, then return the following error message on the page:
     if (!data) {
-      $("#test-data-dump").append("<h2> Hmmm... No data was returned from database. Try another city. </h2>");
+      $("#displayCityName").append("<h2> Hmmm... No data was returned from database. Try another city. </h2>");
     } else {
+      $("#displayCityName").append(`<h4> Showing Results For: ${data.areaname}</h4>`);
+      
       // otherwise, append the search result data to the test-data-dump div at the bottom of the page:
       // $("#test-data-dump").append("<h2>" + data.Areaname + "</h2>");
       // // Example Data Set #1
