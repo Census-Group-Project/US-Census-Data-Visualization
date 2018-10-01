@@ -10,13 +10,16 @@ $("#search-btn").on("click", function () {
   let searchedCity = $("#city-search")
     .val()
     .trim();
+  console.log(searchedCity);
 
   // Using a RegEx Pattern to remove any spaces from searchedCity
   // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
   searchedCity = searchedCity.replace(/\s+/g, "").toLowerCase();
+  console.log(searchedCity);
 
   // Splits search variable at the comma, seporating city and state into an array of two seperate strings.
   searchedCity = searchedCity.split(",");
+  console.log(searchedCity);
 
 
   // Re-defines search variable as single string, joining each string with a wildcard character '&' in between (because we cannot pass a comma into the AJAX URL for our API).
@@ -28,7 +31,7 @@ $("#search-btn").on("click", function () {
   $.get("/api/" + searchedCity, function (data) {
     // log the data to our console
     console.log(data);
-    // empty to test-data-dump section bexfore adding new content
+    // empty test-data-dump section before adding new content
     $("#test-data-dump").empty();
     // if the data is not found in the DB, then return the following error message on the page:
     if (!data) {
@@ -76,7 +79,7 @@ $("#search-btn").on("click", function () {
       // Doing the same for the median income and unemployment
       const mathMedianFamilyIncome = (Math.round(data.medianFamilyIncome / 1000));
       $("#textMedianFamilyIncome").append(`<h4 class="removeCustomStat">$${mathMedianFamilyIncome}K</h4>`);
-      $("#textUnemploymentRate2010").append(`<h4 class="removeCustomStat">$${data.unemploymentRate2010}%</h4>`);
+      $("#textUnemploymentRate2010").append(`<h4 class="removeCustomStat">${data.unemploymentRate2010}%</h4>`);
       $("#graphUnemploymentRate2010").append(`<span class="bar-fill" style="width:${data.unemploymentRate2010}%;"></span>`);
 
       //Clear the previous content

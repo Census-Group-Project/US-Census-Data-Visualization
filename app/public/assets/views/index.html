@@ -84,7 +84,7 @@
 
                                     <input type="text" name="myCountry" id="city-search" placeholder="Type a US city, Ex: Austin, TX">
                                     <button id="search-btn">Search</button>
-                                    
+
                                 </form>
                             </div>
                         </div>
@@ -122,9 +122,28 @@
     </section>
     <section class="bg-primary" id="firstGraphicalSection">
         <div class="container">
+
+            <!-- Creating row and col-lg-6 within this existing col-lg-6 to give the pie chart a different plane than its accompanying text, the unique id is used to push it down -->
             <div class="row">
                 <div class="col-lg-6 mx-auto text-center">
                     <h1 id="racialDemographicsSubtitleStyle" class="timesNewRomanText">Racial Demographics</h1>
+                    <h1 id="pushPieChartDown"></h1>
+                    <!-- Start Default Pie Chart -->
+                    <div id="pieChart" class="chart customPieChart">
+                        <!-- <h1 id="pushCustomPieChartDown"></h1> -->
+                    </div>
+                    <div class="customPieChart"></div>
+                    <!-- End Default Pie Chart -->
+                </div>
+            </div>
+
+
+            <div class="row">
+
+
+
+                <div class="col-lg-6 mx-auto text-center">
+
                     <div class="googleFontOpenSans">
                         <h3>Percentage of the Population</h3>
                         <h6 id="graphWhitePopulation">White alone: </h6>
@@ -139,19 +158,11 @@
                     </div>
                     <br>
                     <br>
-                    <!-- Creating row and col-lg-6 within this existing col-lg-6 to give the pie chart a different plane than its accompanying text, the unique id is used to push it down -->
-                    <div class="row">
-                        <div class="col-lg-6 mx-auto text-center">
-                            <h1 id="pushPieChartDown"></h1>
-                            <!-- Start Default Pie Chart -->
-                            <div id="pieChart" class="chart customPieChart">
-                                <!-- <h1 id="pushCustomPieChartDown"></h1> -->
-                            </div>
-                            <div class="customPieChart"></div>
-                            <!-- End Default Pie Chart -->
-                        </div>
-                    </div>
+
+
                 </div>
+
+
                 <div class="col-lg-6 mx-auto text-center timesNewRomanText">
                     <!-- Start Default Bar Graph -->
                     <ul class="bar-graph googleFontOpenSans">
