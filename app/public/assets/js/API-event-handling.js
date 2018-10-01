@@ -6,6 +6,10 @@
 $("#search-btn").on("click", function () {
   event.preventDefault();
   
+  // Showing the search results after autocomplete is no longer needed
+  $("#firstGraphicalSection").show();
+  $("#myChartCustom").show();
+
   // Saves the search value from the city-search bar into a variable.
   let searchedCity = $("#city-search")
     .val()

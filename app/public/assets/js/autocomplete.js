@@ -1,4 +1,6 @@
 function autocomplete(inp, arr) {
+    //$("#firstGraphicalSection").hide();
+    $("#myChartCustom").hide();
   /*the autocomplete function takes two arguments,
     the text field element and an array of possible autocompleted values:*/
   var currentFocus;
@@ -3302,5 +3304,5 @@ var countries = [
 "Weston, WY"
 ];
 
-  /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+  /*initiate the autocomplete function on the "city-search" element, and pass along the countries array as possible autocomplete values:*/
 autocomplete(document.getElementById("city-search"), countries);

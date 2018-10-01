@@ -68,7 +68,7 @@ a {
 }
 
 /* media query for search bar on mobile */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 550px) {
   #search input {
     width: 250px;
     padding: 15px;
@@ -559,7 +559,7 @@ body {
 
 #racialDemographicsSubtitleStyle {
   padding-top: 20px;
-  padding-bottom: 100px;
+  padding-bottom: 10px;
 }
  /* Styling for About Heading */
 .googleFontsRaleway {
@@ -588,7 +588,7 @@ body {
 }
 
 #pushPieChartDown {
-  padding-bottom: 400px;
+  padding-bottom: 390px;
 }
 
 /* #pushCustomPieChartDown {
@@ -600,6 +600,8 @@ body {
   padding-top: 0px;
   padding-bottom: 0px;
 }
+
+
 
 /* Changing bar display color of General Population Statistics graphes */
 .bar-wrap {
@@ -673,3 +675,34 @@ input[type=submit] {
   color: #ffffff; 
 }
 /* Autocomplete end */
+
+/* Pie chart space adjustment with the text underneath*/
+#rowPieChartEditing {
+  padding-bottom: 0px;
+  position: relative;
+  bottom: 75px;
+}
+
+/* Updating display of General Population Statistics heading */
+#generalPopulationStatisticsHeading {
+  padding-top: 20px;
+}
+
+/* Adjusting the GPS content area as well */
+#shiftGPSContentUp {
+  padding-bottom: 0px;
+  position: relative;
+  bottom: 25px;
+}
+@media only screen and (max-width: 550px) {
+  #shiftGPSContentUp {
+    padding-bottom: 0px;
+    position: relative;
+    bottom: 125px;
+  }
+}
+
+#services{
+  padding-top:20px;
+  padding-bottom: 0px;
+}

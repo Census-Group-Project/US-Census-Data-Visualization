@@ -122,29 +122,29 @@
     </section>
     <section class="bg-primary" id="firstGraphicalSection">
         <div class="container">
-
-            <!-- Creating row and col-lg-6 within this existing col-lg-6 to give the pie chart a different plane than its accompanying text, the unique id is used to push it down -->
             <div class="row">
+
+
+
                 <div class="col-lg-6 mx-auto text-center">
                     <h1 id="racialDemographicsSubtitleStyle" class="timesNewRomanText">Racial Demographics</h1>
-                    <h1 id="pushPieChartDown"></h1>
-                    <!-- Start Default Pie Chart -->
-                    <div id="pieChart" class="chart customPieChart">
-                        <!-- <h1 id="pushCustomPieChartDown"></h1> -->
+
+                    <!-- Creating row and col-lg-6 within this existing col-lg-6 to give the pie chart a different plane than its accompanying text, the unique id is used to push it down -->
+                    <div class="row">
+
+                        <div class="col-lg-6 mx-auto text-center">
+
+                            <h1 id="pushPieChartDown"></h1>
+                            <!-- Start Default Pie Chart -->
+                            <div id="pieChart" class="chart customPieChart">
+                                <!-- <h1 id="pushCustomPieChartDown"></h1> -->
+                            </div>
+                            <div class="customPieChart"></div>
+                            <!-- End Default Pie Chart -->
+                        </div>
                     </div>
-                    <div class="customPieChart"></div>
-                    <!-- End Default Pie Chart -->
-                </div>
-            </div>
 
-
-            <div class="row">
-
-
-
-                <div class="col-lg-6 mx-auto text-center">
-
-                    <div class="googleFontOpenSans">
+                    <div id="rowPieChartEditing" class="googleFontOpenSans">
                         <h3>Percentage of the Population</h3>
                         <h6 id="graphWhitePopulation">White alone: </h6>
                         <h6 id="graphBlackPopulation">Black alone: </h6>
@@ -164,9 +164,10 @@
 
 
                 <div class="col-lg-6 mx-auto text-center timesNewRomanText">
+                    <h1 id="generalPopulationStatisticsHeading" class="timesNewRomanText">General Population Statistics</h1>
+
                     <!-- Start Default Bar Graph -->
-                    <ul class="bar-graph googleFontOpenSans">
-                        <h1 class="timesNewRomanText">General Population Statistics</h1>
+                    <ul id="shiftGPSContentUp"class="bar-graph googleFontOpenSans">
                         <!-- <li> -->
                         <!-- <h4>Percentage of the Population Under Age 18<p id="textPercentPopulationUnder18"></p>
                                 </p>
@@ -209,7 +210,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading timesNewRomanText">Presidential Party Nominee Vote Percentage</h2>
+                    <h1 class="section-heading timesNewRomanText">Presidential Party Nominee Vote Percentage</h1>
                     <hr class="my-4">
                 </div>
             </div>
@@ -296,7 +297,7 @@
                         </div>
                     </div>
 
-                    <h2 class="section-heading timesNewRomanText">Income Distribution</h2>
+                    <h1 class="section-heading timesNewRomanText">Income Distribution</h1>
                     <hr class="my-4">
                 </div>
             </div>
@@ -306,39 +307,10 @@
             <div class="row">
                 <!-- Start Income Distribution Graph -->
                 <!-- Default graph before searching a city -->
-                <canvas id="myChart" width="400" height="200"></canvas>
+                <canvas id="myChart" width="400" height="300"></canvas>
                 <!-- Custom city graph -->
-                <canvas id="myChartCustom" width="400" height="200"></canvas>
+                <canvas id="myChartCustom" width="400" height="300"></canvas>
                 <!-- End Income Distribution Graph -->
-                <!--
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box mt-5 mx-auto">
-                        <i class="fas fa-4x fa-gem text-primary mb-3 sr-icon-1"></i>
-                        <h3 class="mb-3">Sturdy Templates</h3>
-                        <p class="text-muted mb-0">Our templates are updated regularly so they don't break.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box mt-5 mx-auto">
-                        <i class="fas fa-4x fa-paper-plane text-primary mb-3 sr-icon-2"></i>
-                        <h3 class="mb-3">Ready to Ship</h3>
-                        <p class="text-muted mb-0">You can use this theme as is, or you can make changes!</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box mt-5 mx-auto">
-                        <i class="fas fa-4x fa-code text-primary mb-3 sr-icon-3"></i>
-                        <h3 class="mb-3">Up to Date</h3>
-                        <p class="text-muted mb-0">We update dependencies to keep things fresh.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box mt-5 mx-auto">
-                        <i class="fas fa-4x fa-heart text-primary mb-3 sr-icon-4"></i>
-                        <h3 class="mb-3">Made with Love</h3>
-                        <p class="text-muted mb-0">You have to make your websites with love these days!</p>
-                    </div>
-                </div>-->
             </div>
         </div>
     </section>
