@@ -79,11 +79,12 @@
                     <div id="wrap">
                         <div class="center">
                             <div id="search">
-                                <form group="search" method="POST">
-                                    <span class="ac ac-hidden"></span>
+                                <form autocomplete="off" group="search" method="POST">
+                                    <span class="ac ac-hidden autocomplete"></span>
 
-                                    <input type="text" id="city-search" placeholder="Type a US city, Ex: Austin, TX">
+                                    <input type="text" name="myCountry" id="city-search" placeholder="Type a US city, Ex: Austin, TX">
                                     <button id="search-btn">Search</button>
+                                    
                                 </form>
                             </div>
                         </div>
@@ -94,7 +95,7 @@
         </div>
     </header>
 
-  <!--  <section class="bg-primary" id="about">
+    <!--  <section class="bg-primary" id="about">
         <div class="container" id="shrinkAboutContainer">
             <div class="row">
 
@@ -103,7 +104,7 @@
                 <h2 class="section-heading text-white" id="test-data-dump"></h2>
                 <hr class="light my-4">
                 <p class="text-faded mb-4"> -->
-      <!--  <ul style="list-style: none;">
+    <!--  <ul style="list-style: none;">
         <div class="col-lg-12 col-md-2 text-center">
             <h2>Getting Started</h2>
             <li>Search any city and view their demographics below </li>
@@ -115,8 +116,9 @@
                     </ul>
                     </p>
                 -->
-            </div></div>
-        </div>
+    </div>
+    </div>
+    </div>
     </section>
     <section class="bg-primary" id="firstGraphicalSection">
         <div class="container">
@@ -124,13 +126,15 @@
                 <div class="col-lg-6 mx-auto text-center">
                     <h1 id="racialDemographicsSubtitleStyle" class="timesNewRomanText">Racial Demographics</h1>
                     <div class="googleFontOpenSans">
-                    <h3>Percentage of the Population</h3>
+                        <h3>Percentage of the Population</h3>
                         <h6 id="graphWhitePopulation">White alone: </h6>
                         <h6 id="graphBlackPopulation">Black alone: </h6>
                         <h6 id="graphAsianPopulation">Asian alone: </h6>
                         <h6 id="graphHispanicOrLatinoPopulation">Hispanic or Latino alone:</h6>
-                        <h6 id="graphAmericanIndianAndAlaskanNativePopulation">American Indian and Alaskan Native alone: </h6>
-                        <h6 id="graphNativeHawaiianAndPacificIslanderPopulation">Native Hawaiian and Pacific Islander alone: </h6>
+                        <h6 id="graphAmericanIndianAndAlaskanNativePopulation">American Indian and Alaskan Native
+                            alone: </h6>
+                        <h6 id="graphNativeHawaiianAndPacificIslanderPopulation">Native Hawaiian and Pacific Islander
+                            alone: </h6>
                         <h6 id="graphTwoOrMoreRacesPopulation">Two or More Races: </h6>
                     </div>
                     <br>
@@ -153,13 +157,13 @@
                     <ul class="bar-graph googleFontOpenSans">
                         <h1 class="timesNewRomanText">General Population Statistics</h1>
                         <!-- <li> -->
-                            <!-- <h4>Percentage of the Population Under Age 18<p id="textPercentPopulationUnder18"></p>
+                        <!-- <h4>Percentage of the Population Under Age 18<p id="textPercentPopulationUnder18"></p>
                                 </p>
                             </h4> -->
-                            <!-- <div id="graphPercentPopulationUnder18" class="bar-wrap"><span class="bar-fill" style="width: 0%;"></span></div> -->
+                        <!-- <div id="graphPercentPopulationUnder18" class="bar-wrap"><span class="bar-fill" style="width: 0%;"></span></div> -->
                         <!-- </li> -->
                         <!-- <li> -->
-                            <!-- <h4>Percentage of Families Below Poverty Level<p id="textFamiliesBelowPovertyLevel"></p>
+                        <!-- <h4>Percentage of Families Below Poverty Level<p id="textFamiliesBelowPovertyLevel"></p>
                             </h4>
                             <div id="graphFamiliesBelowPovertyLevel" class="bar-wrap"><span class="bar-fill" style="width: 0%;"></span></div> -->
                         <!-- </li> -->
@@ -295,7 +299,7 @@
                 <!-- Custom city graph -->
                 <canvas id="myChartCustom" width="400" height="200"></canvas>
                 <!-- End Income Distribution Graph -->
-<!--
+                <!--
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box mt-5 mx-auto">
                         <i class="fas fa-4x fa-gem text-primary mb-3 sr-icon-1"></i>
@@ -335,7 +339,7 @@
                     <a class="portfolio-box" href="https://www.census.gov/quickfacts/fact/table/losangelescountycalifornia/PST045217"
                         target="_blank">
                         <img class="img-fluid" src="../bootstrap/img/portfolio/thumbnails/1.jpg" alt="">
-                            <div class="portfolio-box-caption background-white">
+                        <div class="portfolio-box-caption background-white">
                             <div class="portfolio-box-caption-content">
                                 <div id="timezoneLA" class="project-category text-faded">
                                     12:00:00 pm
@@ -349,12 +353,12 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="https://www.census.gov/quickfacts/ny" target="_blank">
+                    <a class="portfolio-box" href="https://www.census.gov/quickfacts/ny" target="_blank">
                         <img class="img-fluid" src="../bootstrap/img/portfolio/thumbnails/2.jpg" alt="">
-                            <div class="portfolio-box-caption background-white">
+                        <div class="portfolio-box-caption background-white">
                             <div class="portfolio-box-caption-content">
                                 <div id="timezoneNY" class="project-category text-faded">
-                                12:00:00 pm
+                                    12:00:00 pm
                                 </div>
                                 <div class="project-name">
                                     New York
@@ -366,9 +370,9 @@
                 <div class="col-lg-4 col-sm-6">
                     <a class="portfolio-box" href="https://www.census.gov/quickfacts/chicagocityillinois" target="_blank">
                         <img class="img-fluid" src="../bootstrap/img/portfolio/thumbnails/3.jpg" alt="">
-                            <div class="portfolio-box-caption background-white">
-                                <div class="portfolio-box-caption-content">
-                                <div id = "timezoneChicago" class="project-category text-faded">
+                        <div class="portfolio-box-caption background-white">
+                            <div class="portfolio-box-caption-content">
+                                <div id="timezoneChicago" class="project-category text-faded">
                                     12:00:00 pm
                                 </div>
                                 <div class="project-name">
@@ -379,11 +383,12 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <a class="portfolio-box" href="https://www.census.gov/quickfacts/fact/table/seattlecitywashington,US/PST045217" target="_blank">
+                    <a class="portfolio-box" href="https://www.census.gov/quickfacts/fact/table/seattlecitywashington,US/PST045217"
+                        target="_blank">
                         <img class="img-fluid" src="../bootstrap/img/portfolio/thumbnails/4.jpg" alt="">
-                    <div class="portfolio-box-caption background-white">
+                        <div class="portfolio-box-caption background-white">
                             <div class="portfolio-box-caption-content">
-                                <div id = "timezoneSea" class="project-category text-faded">
+                                <div id="timezoneSea" class="project-category text-faded">
                                     12:00:00 pm
                                 </div>
                                 <div class="project-name">
@@ -396,27 +401,28 @@
                 <div class="col-lg-4 col-sm-6">
                     <!-- commenting this to keep it for later -->
                     <!-- <a class="portfolio-box" href="../bootstrap/img/portfolio/fullsize/5.jpg"> -->
-                    <a class="portfolio-box" href="https://www.census.gov/quickfacts/fact/table/santamonicacitycalifornia,US/PST045217" target="_blank">
+                    <a class="portfolio-box" href="https://www.census.gov/quickfacts/fact/table/santamonicacitycalifornia,US/PST045217"
+                        target="_blank">
                         <img class="img-fluid" src="../bootstrap/img/portfolio/thumbnails/5.jpg" alt="" />
 
-                    <div class="portfolio-box-caption background-white">
-                        <div class="portfolio-box-caption-content">
-                            <div id="timezoneSanta" class="project-category text-faded">
-                                12:00:00 pm
-                            </div>
-                            <div class="project-name">
-                                Santa Monica
+                        <div class="portfolio-box-caption background-white">
+                            <div class="portfolio-box-caption-content">
+                                <div id="timezoneSanta" class="project-category text-faded">
+                                    12:00:00 pm
+                                </div>
+                                <div class="project-name">
+                                    Santa Monica
+                                </div>
                             </div>
                         </div>
-                    </div>
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="https://www.census.gov/quickfacts/bostoncitymassachusetts" target="_blank">
+                    <a class="portfolio-box" href="https://www.census.gov/quickfacts/bostoncitymassachusetts" target="_blank">
                         <img class="img-fluid" src="../bootstrap/img/portfolio/thumbnails/6.jpg" alt="">
-                            <div class="portfolio-box-caption background-white">
+                        <div class="portfolio-box-caption background-white">
                             <div class="portfolio-box-caption-content">
-                                <div class id="timezoneBost" ="project-category text-faded">
+                                <div class id="timezoneBost"="project-category text-faded">
                                     12:00:00 pm
                                 </div>
                                 <div class="project-name">
@@ -486,6 +492,7 @@
 
     <!-- Custom script to handle search event to API  -->
     <script src="../js/API-event-handling.js" type="text/javascript"></script>
+    <script src="../js/autocomplete.js" type="text/javascript"></script>
     <script src="../js/google.js" type="text/javascript"></script>
 </body>
 
