@@ -107,7 +107,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 mx-auto text-center">
-                        <h1 id="racialDemographicsSubtitleStyle" class="timesNewRomanText">Racial Demographics</h1>
+                        <h1 id="racialDemographicsSubtitleStyle" class="timesNewRomanText googleFontsNoto">Racial
+                            Demographics</h1>
 
                         <!-- Creating row and col-lg-6 within this existing col-lg-6 to give the pie chart a different plane than its accompanying text, the unique id is used to push it down -->
                         <div class="row">
@@ -145,7 +146,8 @@
 
 
                     <div class="col-lg-6 mx-auto text-center timesNewRomanText">
-                        <h1 id="generalPopulationStatisticsHeading" class="timesNewRomanText">General Population
+                        <h1 id="generalPopulationStatisticsHeading" class="timesNewRomanText googleFontsNoto">General
+                            Population
                             Statistics</h1>
 
                         <!-- Start Default Bar Graph -->
@@ -181,13 +183,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <h1 class="section-heading timesNewRomanText">Presidential Party Nominee Vote Percentage</h1>
+                        <h1 id="politicalGraphHeading" class="section-heading googleFontsNoto">Percentage of Popular Vote by Political Party</h1>
                         <hr class="my-4">
                     </div>
                 </div>
             </div>
             <!-- Start US Default Bar Graph 2 -->
-            <div class="container">
+            <div class="container" id="politicalGraph">
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <div id="bar-chart">
@@ -224,15 +226,34 @@
                                     </div>
                                 </div>
                             </div>
+                            <h5 class="text-center googleFontsNoto">Legend</h5>
+                            <p class="text-center"id="legendPoliticalGraph1">
+                                <div class="text-center googleFontsRaleway" >Republican Party Vote Percentage</div>
+                            <p>
+                            <p class="text-center" id="legendPoliticalGraph2">
+                                <div class="text-center googleFontsRaleway">Democratic Party Vote Percentage</div>
+                            </p>
                         </div>
 
-                        <h1 class="section-heading timesNewRomanText">Income Distribution</h1>
-                        <hr class="my-4">
+
                     </div>
                 </div>
             </div>
+
+            <div class="container" >
+                <div class="row">
+                    <div class="col-lg-12 text-center" id="legendPoliticalSpacing">
+                       
+                    </div>
+                </div>
+            </div>
+
+
+
             <!-- End US Default Bar Graph 2 -->
             <div class="container">
+                <h1 class="text-center section-heading googleFontsNoto">Income Distribution</h1>
+                <hr class="my-4">
                 <div class="row">
                     <!-- Start Income Distribution Graph -->
                     <!-- Default graph before searching a city -->
@@ -247,23 +268,31 @@
         <section id="about">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <h4 id="openSourceToolHeading" class="section-heading text-white googleFontsNoto text-center">Open-Source
+                    <div class="col-lg-9 mx-auto">
+                        <h1 class="googleFontsNoto text-center">About</h1>
+                        <h4 id="openSourceToolHeading" class="section-heading text-white googleFontsRaleway text-center">Open-Source
                             Tool for Analyzing American Political, Economic, and Social Characteristics</h4>
                         <hr class="light my-4">
                         <p class="text-faded mb-4">This application uses data from a unique, previously unutilized
-                            dataset collected by the United States Census Bureau in July 2009. While the U.S. Census
-                            Bureau does offer some tools for exploring their collected statistics, their tools are
+                            dataset collected by the United States Census Bureau in July 2009. While the bureau does
+                            offer some tools for exploring their collected statistics, their tools are
                             often dated, limited in functionality, and closed source (or proprietary software).
-                            <br>
-                            <br>
+                            <br><br>
                             The goal of my open-source government data project is to make public data easier to
                             navigate by providing modern visualizations, a thoughtful assortment of public resources,
                             and organizated, transparent downloadable data. Researchers and businesses have routinely
                             leveraged public data to reach new social insights and make smarter business decisions; I
                             hope to help these groups by creating a superior tool for analyzing all kinds of American
-                            characteristics.</p>
-                        <a class="btn btn-light btn-xl js-scroll-trigger googleFontsRaleway text-center" href="#services">Download Data Spreadsheet</a>
+                            characteristics.
+                            <br><br>
+                            The data that powers this app can be found in on the US Census Bureau's website in its raw
+                            form <a href="https://www.census.gov/support/USACdataDownloads.html">here.</a> But I do
+                            provide a more intuitively organized version of the data in a single file available to
+                            download with the button below.
+                        </p>
+
+                        <a class="btn btn-light btn-xl js-scroll-trigger googleFontsRaleway text-center" href="../data/US-Census-Data-Master-File.xlsx">Download
+                            Data Spreadsheet</a>
                     </div>
                 </div>
             </div>
