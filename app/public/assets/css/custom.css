@@ -584,7 +584,6 @@ body {
 
 .googleFontsNoto {
   font-family: 'Noto Serif JP', sans-serif;
-  font-size: 14pt;
 }
 
 #pushPieChartDown {
@@ -732,4 +731,16 @@ input[type=submit] {
   #mobileOnly {
     display: block;
   }
+}
+
+/* Adding background pattern for the About section */
+#about {
+  background-color: #d17000; 
+  /* background-image: url(../images/absurdity.png); */
+}
+
+/* Making the open-source title slightly smaller to fit it on one line */
+#openSourceToolHeading {
+  font-size: 12.5pt;
+  width: auto;
 }
