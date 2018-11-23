@@ -750,7 +750,7 @@ input[type="submit"] {
 }
 
 #displayCityName {
-  padding-top: 15px;
+  padding-top: 50px;
 }
 
 #mobileText {
@@ -803,4 +803,8 @@ input[type="submit"] {
 
 #politicalGraphHeading {
   padding-bottom: -100px;
+}
+
+#testForScrolling {
+  padding-bottom: 200px;
 }

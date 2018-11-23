@@ -8,7 +8,7 @@ $("#search-btn").on("click", function () {
 
   // Scroll down to the results section
     $('html,body').animate({
-        scrollTop: $("#firstGraphicalSection").offset().top},
+        scrollTop: $("#displayCityName").offset().top},
         'slow');
   
   // Showing the search results after autocomplete is no longer needed
