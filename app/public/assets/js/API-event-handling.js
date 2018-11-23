@@ -50,22 +50,6 @@ $("#search-btn").on("click", function () {
     } else {
       $("#displayCityName").append(`<h4> Showing Results For: ${data.areaname}</h4>`);
       
-      // otherwise, append the search result data to the test-data-dump div at the bottom of the page:
-      // $("#test-data-dump").append("<h2>" + data.Areaname + "</h2>");
-      // // Example Data Set #1
-      // $("#test-data-dump").append("<h3>Data Set #1: " + data.STCOU + "</h3>");
-      // // Example Data Set #2
-      // //$("#test-data-dump").append("<h3>Data Set #2: " + data.PST100209D + "</h3>");
-      // // otherwise
-      // // append the character name
-      // $("#test-data-dump").append("<h2> City Name:"+ data.areaname + "</h2>");
-      // // the role
-      // $("#test-data-dump").append("<h3>State and County #: " + data.stateCounty + "</h3>");
-      // // the age
-      // $("#test-data-dump").append("<h3>Total Population: " + data.totalPopulation + "</h3>");
-      // $("#test-data-dump").append("<h3>Data Set #2: " + data.PST100209D + "</h3>");
-      
-
       // General side bar graph (blue) clearing then appending new data
       $(".bar-fill").remove();
       // Removing all custom stats
@@ -394,8 +378,7 @@ $("#search-btn").on("click", function () {
       $.ajax(censusDataObject).done(function (response) {
         console.log(response);
       });
-      
-      
+       
       var ctx = document.getElementById("myChartCustom").getContext('2d');
       var myChartCustom = new Chart(ctx, {
         type: 'bar',
@@ -458,7 +441,6 @@ $("#search-btn").on("click", function () {
 
 
 
-
 // The below 250 lines are for the Racial Demographics pie chart
 $(document).ready(function(){
   $('.icon').click(function(){
@@ -467,8 +449,6 @@ $(document).ready(function(){
 });
 
 $(function(){
-
-
   $("#pieChart").drawPieChart([
     { title: "Tokyo",         value : 180,  color: "#02B3E7" },
     { title: "San Francisco", value:  60,   color: "#CFD3D6" },
