@@ -5,18 +5,32 @@
 // when user hits the city-search-btn
 $("#search-btn").on("click", function () {
   event.preventDefault();
+
+  // Scroll down to the results section
+    $('html,body').animate({
+        scrollTop: $("#displayCityName").offset().top},
+        'slow');
   
+  // Showing the search results after autocomplete is no longer needed
+  $("#firstGraphicalSection").show();
+  $("#myChartCustom").show();
+  $("div#mobileHideForAutocomplete").removeAttr('id');
+  $("#mobileOnly").remove();
+
   // Saves the search value from the city-search bar into a variable.
   let searchedCity = $("#city-search")
     .val()
     .trim();
+  console.log(searchedCity);
 
   // Using a RegEx Pattern to remove any spaces from searchedCity
   // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
   searchedCity = searchedCity.replace(/\s+/g, "").toLowerCase();
+  console.log(searchedCity);
 
   // Splits search variable at the comma, seporating city and state into an array of two seperate strings.
   searchedCity = searchedCity.split(",");
+  console.log(searchedCity);
 
 
   // Re-defines search variable as single string, joining each string with a wildcard character '&' in between (because we cannot pass a comma into the AJAX URL for our API).
@@ -28,28 +42,14 @@ $("#search-btn").on("click", function () {
   $.get("/api/" + searchedCity, function (data) {
     // log the data to our console
     console.log(data);
-    // empty to test-data-dump section bexfore adding new content
-    $("#test-data-dump").empty();
+    // empty test-data-dump section before adding new content
+    $("#displayCityName").empty();
     // if the data is not found in the DB, then return the following error message on the page:
     if (!data) {
-      $("#test-data-dump").append("<h2> Hmmm... No data was returned from database. Try another city. </h2>");
+      $("#displayCityName").append("<h2> Hmmm... No data was returned from database. Try another city. </h2>");
     } else {
-      // otherwise, append the search result data to the test-data-dump div at the bottom of the page:
-      // $("#test-data-dump").append("<h2>" + data.Areaname + "</h2>");
-      // // Example Data Set #1
-      // $("#test-data-dump").append("<h3>Data Set #1: " + data.STCOU + "</h3>");
-      // // Example Data Set #2
-      // //$("#test-data-dump").append("<h3>Data Set #2: " + data.PST100209D + "</h3>");
-      // // otherwise
-      // // append the character name
-      // $("#test-data-dump").append("<h2> City Name:"+ data.areaname + "</h2>");
-      // // the role
-      // $("#test-data-dump").append("<h3>State and County #: " + data.stateCounty + "</h3>");
-      // // the age
-      // $("#test-data-dump").append("<h3>Total Population: " + data.totalPopulation + "</h3>");
-      // $("#test-data-dump").append("<h3>Data Set #2: " + data.PST100209D + "</h3>");
+      $("#displayCityName").append(`<h4> Showing Results For: ${data.areaname}</h4>`);
       
-
       // General side bar graph (blue) clearing then appending new data
       $(".bar-fill").remove();
       // Removing all custom stats
@@ -76,7 +76,7 @@ $("#search-btn").on("click", function () {
       // Doing the same for the median income and unemployment
       const mathMedianFamilyIncome = (Math.round(data.medianFamilyIncome / 1000));
       $("#textMedianFamilyIncome").append(`<h4 class="removeCustomStat">$${mathMedianFamilyIncome}K</h4>`);
-      $("#textUnemploymentRate2010").append(`<h4 class="removeCustomStat">$${data.unemploymentRate2010}%</h4>`);
+      $("#textUnemploymentRate2010").append(`<h4 class="removeCustomStat">${data.unemploymentRate2010}%</h4>`);
       $("#graphUnemploymentRate2010").append(`<span class="bar-fill" style="width:${data.unemploymentRate2010}%;"></span>`);
 
       //Clear the previous content
@@ -378,8 +378,7 @@ $("#search-btn").on("click", function () {
       $.ajax(censusDataObject).done(function (response) {
         console.log(response);
       });
-      
-      
+       
       var ctx = document.getElementById("myChartCustom").getContext('2d');
       var myChartCustom = new Chart(ctx, {
         type: 'bar',
@@ -442,7 +441,6 @@ $("#search-btn").on("click", function () {
 
 
 
-
 // The below 250 lines are for the Racial Demographics pie chart
 $(document).ready(function(){
   $('.icon').click(function(){
@@ -451,16 +449,15 @@ $(document).ready(function(){
 });
 
 $(function(){
-
-
   $("#pieChart").drawPieChart([
-    { title: "Tokyo",         value : 180,  color: "#02B3E7" },
-    { title: "San Francisco", value:  60,   color: "#CFD3D6" },
-    { title: "London",        value : 50,   color: "#736D79" },
-    { title: "New York",      value:  30,   color: "#776068" },
-    { title: "Sydney",        value : 20,   color: "#EB0D42" },
-    { title: "Berlin",        value : 20,   color: "#FFEC62" },
-    { title: "Osaka",         value : 7,    color: "#04374E" }
+    { title: "National Average: White alone", value : 53.9,  color: "#636393" },
+    { title: "National Average: Hispanic and Latino Americans", value : 12.1,  color: "#B5222D" },
+    { title: "National Average: Black or African American", value:  9.4,   color: "#D4953C" },
+    { title: "National Average: Asian", value : 3.6,   color: "#609491" },
+    { title: "National Average: Native Americans and Alaska Natives", value:  0.7,   color: "#87A248" },
+    { title: "National Average: Native Hawaiians and Other Pacific Islanders",        value : 0.1,   color: "#EB0D42" },
+    { title: "National Average: Two or more races",        value : 14.9,   color: "#FFEC62" },
+    { title: "National Average: Some other race",         value : 5.2,    color: "#04374E" }
   ]);
 });
 

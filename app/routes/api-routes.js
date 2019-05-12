@@ -1,12 +1,11 @@
 const Census = require("../models/census.js");
 
-module.exports = function (app) {
+module.exports = function(app) {
   // GET route handling to return ALL available Census data, as defined by the model (census.js).
-  // If the user provides a specific city, JSON for the census data will be returned for that specific city. If no city is provided, ALL census data will be returned for the United States as JSON. 
+  // If the user provides a specific city, JSON for the census data will be returned for that specific city. If no city is provided, ALL census data will be returned for the United States as JSON.
 
-  app.get("/api/:city?", function (req, res) {
+  app.get("/api/:city?", function(req, res) {
     if (req.params.city) {
-
       // Re-construct search params for database:
       // 1. Store the incoming search parameters into a variable.
       let searchParams = req.params.city;
@@ -20,15 +19,22 @@ module.exports = function (app) {
         where: {
           Reduced_Name: searchParams
         }
-      }).then(function (results) {
+      }).then(function(results) {
+        return res.json(results);
+      });
+      Census.findOne({
+        where: {
+          Reduced_Name: "austin&tx"
+        }
+      }).then(function(results) {
         return res.json(results);
       });
     } else {
       Census.findOne({
         where: {
-          areaname: 'UNITED STATES'
+          Reduced_Name: "austin&tx"
         }
-      }).then(function (results) {
+      }).then(function(results) {
         return res.json(results);
       });
     }

@@ -9,6 +9,8 @@
 
     <title>Census Data Visualization</title>
 
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.ico" />
     <!-- Start Head Links for Bootstrap Template -->
     <!-- Bootstrap core CSS -->
     <link href="../bootstrap/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -49,20 +51,17 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#search">Search</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#portfolio">Major Cities </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <header class="masthead text-center text-white d-flex">
+    <header id="search" class="masthead text-center text-white d-flex">
         <div class="container my-auto">
             <div class="row">
                 <div class="col-lg-10 mx-auto">
@@ -79,11 +78,12 @@
                     <div id="wrap">
                         <div class="center">
                             <div id="search">
-                                <form group="search" method="POST">
-                                    <span class="ac ac-hidden"></span>
+                                <form autocomplete="off" group="search" method="POST">
+                                    <span class="ac ac-hidden autocomplete"></span>
 
-                                    <input type="text" id="city-search" placeholder="Type a US city, Ex: Austin, TX">
+                                    <input type="text" name="myCountry" id="city-search" placeholder="Type a US city, Ex: Austin, TX">
                                     <button id="search-btn">Search</button>
+
                                 </form>
                             </div>
                         </div>
@@ -94,399 +94,237 @@
         </div>
     </header>
 
-  <!--  <section class="bg-primary" id="about">
-        <div class="container" id="shrinkAboutContainer">
-            <div class="row">
+    <div class="col-lg-6 mx-auto text-center googleFontsRaleway" id="mobileOnly">
+        <h4 id="mobileText">The results will display when you press "Search"</h4>
+    </div>
+    <div id="mobileHideForAutocomplete">
+        <section class="bg-primary" id="firstGraphicalSection">
+            <!-- Display that shows what city the user searched for -->
+            <div class="col-lg-6 mx-auto text-center googleFontsRaleway" id="displayCityName"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 mx-auto text-center">
+                        <h1 id="racialDemographicsSubtitleStyle" class="timesNewRomanText googleFontsNoto">Racial
+                            Demographics</h1>
 
-              Test div for data dump -- TO BE REMOVED BEFORE DEPLOYMENT!
-                 <div id="test-data-dump"></div> 
-                <h2 class="section-heading text-white" id="test-data-dump"></h2>
-                <hr class="light my-4">
-                <p class="text-faded mb-4"> -->
-      <!--  <ul style="list-style: none;">
-        <div class="col-lg-12 col-md-2 text-center">
-            <h2>Getting Started</h2>
-            <li>Search any city and view their demographics below </li>
-                        <li>All information and statistics are from the United States Census Bureau.</li>
-                        <li>More detailed information about major cities can also be seen below!</li>
+                        <!-- Creating row and col-lg-6 within this existing col-lg-6 to give the pie chart a different plane than its accompanying text, the unique id is used to push it down -->
+                        <div class="row">
+
+                            <div class="col-lg-6 mx-auto text-center">
+
+                                <h1 id="pushPieChartDown"></h1>
+                                <!-- Start Default Pie Chart -->
+                                <div id="pieChart" class="chart customPieChart">
+                                    <!-- <h1 id="pushCustomPieChartDown"></h1> -->
+                                </div>
+                                <div class="customPieChart"></div>
+                                <!-- End Default Pie Chart -->
+                            </div>
+                        </div>
+
+                        <div id="rowPieChartEditing" class="googleFontOpenSans">
+                            <h3>Percentage of the Population</h3>
+                            <h6 id="graphWhitePopulation">White alone: </h6>
+                            <h6 id="graphBlackPopulation">Black alone: </h6>
+                            <h6 id="graphAsianPopulation">Asian alone: </h6>
+                            <h6 id="graphHispanicOrLatinoPopulation">Hispanic or Latino alone:</h6>
+                            <h6 id="graphAmericanIndianAndAlaskanNativePopulation">American Indian and Alaskan Native
+                                alone: </h6>
+                            <h6 id="graphNativeHawaiianAndPacificIslanderPopulation">Native Hawaiian and Pacific
+                                Islander
+                                alone: </h6>
+                            <h6 id="graphTwoOrMoreRacesPopulation">Two or More Races: </h6>
+                        </div>
                         <br>
-        <p><a class="btn btn-light btn-xl js-scroll-trigger" href="#services">View Data</a></p>
-                
-                    </ul>
-                    </p>
-                -->
-            </div></div>
-        </div>
-    </section>
-    <section class="bg-primary" id="firstGraphicalSection">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 mx-auto text-center">
-                    <h1 id="racialDemographicsSubtitleStyle" class="timesNewRomanText">Racial Demographics</h1>
-                    <div class="googleFontOpenSans">
-                    <h3>Percentage of the Population</h3>
-                        <h6 id="graphWhitePopulation">White alone: </h6>
-                        <h6 id="graphBlackPopulation">Black alone: </h6>
-                        <h6 id="graphAsianPopulation">Asian alone: </h6>
-                        <h6 id="graphHispanicOrLatinoPopulation">Hispanic or Latino alone:</h6>
-                        <h6 id="graphAmericanIndianAndAlaskanNativePopulation">American Indian and Alaskan Native alone: </h6>
-                        <h6 id="graphNativeHawaiianAndPacificIslanderPopulation">Native Hawaiian and Pacific Islander alone: </h6>
-                        <h6 id="graphTwoOrMoreRacesPopulation">Two or More Races: </h6>
-                    </div>
-                    <br>
-                    <br>
-                    <!-- Creating row and col-lg-6 within this existing col-lg-6 to give the pie chart a different plane than its accompanying text, the unique id is used to push it down -->
-                    <div class="row">
-                        <div class="col-lg-6 mx-auto text-center">
-                            <h1 id="pushPieChartDown"></h1>
-                            <!-- Start Default Pie Chart -->
-                            <div id="pieChart" class="chart customPieChart">
-                                <!-- <h1 id="pushCustomPieChartDown"></h1> -->
-                            </div>
-                            <div class="customPieChart"></div>
-                            <!-- End Default Pie Chart -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mx-auto text-center timesNewRomanText">
-                    <!-- Start Default Bar Graph -->
-                    <ul class="bar-graph googleFontOpenSans">
-                        <h1 class="timesNewRomanText">General Population Statistics</h1>
-                        <!-- <li> -->
-                            <!-- <h4>Percentage of the Population Under Age 18<p id="textPercentPopulationUnder18"></p>
-                                </p>
-                            </h4> -->
-                            <!-- <div id="graphPercentPopulationUnder18" class="bar-wrap"><span class="bar-fill" style="width: 0%;"></span></div> -->
-                        <!-- </li> -->
-                        <!-- <li> -->
-                            <!-- <h4>Percentage of Families Below Poverty Level<p id="textFamiliesBelowPovertyLevel"></p>
-                            </h4>
-                            <div id="graphFamiliesBelowPovertyLevel" class="bar-wrap"><span class="bar-fill" style="width: 0%;"></span></div> -->
-                        <!-- </li> -->
-                        <li>
-                            <h4>Mean Family Income<p id="textMeanFamilyIncome"></p>
-                            </h4>
-                        </li>
-                        <li>
-                            <h4>Median Family Income<p id="textMedianFamilyIncome"></p>
-                            </h4>
-                        </li>
-                        <li>
-                            <h4>Unemployment Rate (2010)<p id="textUnemploymentRate2010"></p>
-                            </h4>
-                            <div id="graphUnemploymentRate2010" class="bar-wrap"><span class="bar-fill" style="width: 0%;"></span></div>
-                        </li>
-                        <li>
-                            <h4>Percentage of the Population Above Age 65<p id="textPercentPopulationOver65"></p>
-                                </p>
-                            </h4>
-                            <div id="graphPercentPopulationOver65" class="bar-wrap"><span class="bar-fill" style="width: 0%;"></span></div>
-                        </li>
-                    </ul>
+                        <br>
 
-                    <!-- End Default Bar Graph -->
+
+                    </div>
+
+
+                    <div class="col-lg-6 mx-auto text-center timesNewRomanText">
+                        <h1 id="generalPopulationStatisticsHeading" class="timesNewRomanText googleFontsNoto">General
+                            Population
+                            Statistics</h1>
+
+                        <!-- Start Default Bar Graph -->
+                        <ul id="shiftGPSContentUp" class="bar-graph googleFontOpenSans">
+                            <li>
+                                <h4>Mean Family Income<p id="textMeanFamilyIncome"></p>
+                                </h4>
+                            </li>
+                            <li>
+                                <h4>Median Family Income<p id="textMedianFamilyIncome"></p>
+                                </h4>
+                            </li>
+                            <li>
+                                <h4>Unemployment Rate (2010)<p id="textUnemploymentRate2010"></p>
+                                </h4>
+                                <div id="graphUnemploymentRate2010" class="bar-wrap"><span class="bar-fill" style="width: 0%;"></span></div>
+                            </li>
+                            <li>
+                                <h4>Percentage of the Population Above Age 65<p id="textPercentPopulationOver65"></p>
+                                    </p>
+                                </h4>
+                                <div id="graphPercentPopulationOver65" class="bar-wrap"><span class="bar-fill" style="width: 0%;"></span></div>
+                            </li>
+                        </ul>
+
+                        <!-- End Default Bar Graph -->
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="services">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading timesNewRomanText">Presidential Party Nominee Vote Percentage</h2>
-                    <hr class="my-4">
-                </div>
-            </div>
-        </div>
-        <!-- Start US Default Bar Graph 2 -->
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div id="bar-chart">
-                        <div class="graph">
-                            <ul class="x-axis">
-                                <li><span>1992</span></li>
-                                <li><span>1996</span></li>
-                                <li><span>2000</span></li>
-                                <li><span>2004</span></li>
-                                <li><span>2008</span></li>
-                            </ul>
-                            <ul class="y-axis">
-                                <li><span>100%</span></li>
-                                <li><span>75%</span></li>
-                                <li><span>50%</span></li>
-                                <li><span>25%</span></li>
-                                <li><span>0</span></li>
-                            </ul>
-                            <div class="bars">
-                                <div class="bar-group" id="repVote1992">
-                                    <div id="demVote1992"></div>
-                                    <!-- <div class="bar bar-1 stat-1" style="height: 51%;"> -->
-                                    <!-- <span></span> -->
-                                    <!-- </div> -->
-                                    <!-- <div class="bar bar-3 stat-3" style="height: 13%;">
-                                        <span>1040</span>
-                                    </div> -->
-                                </div>
-                                <div class="bar-group" id="repVote1996">
-                                    <div id="demVote1996"></div>
-                                    <!-- <div class="bar bar-4 stat-1" style="height: 76%;">
-                                        <span>6080</span>
-                                    </div>
-                                    <div class="bar bar-5 stat-2" style="height: 86%;">
-                                        <span>6880</span>
-                                    </div>
-                                    <div class="bar bar-6 stat-3" style="height: 22%;">
-                                        <span>1760</span>
-                                </div> -->
-                                </div>
-                                <div class="bar-group" id="repVote2000">
-                                    <div id="demVote2000"></div>
-                                    <!-- <div class="bar bar-7 stat-1" style="height: 78%;">
-                                        <span>6240</span>
-                                    </div>
-                                    <div class="bar bar-8 stat-2" style="height: 72%;">
-                                        <span>5760</span>
-                                    </div>
-                                    <div class="bar bar-9 stat-3" style="height: 36%;">
-                                        <span>2880</span>
-                                    </div> -->
-                                </div>
-                                <div class="bar-group" id="repVote2004">
-                                    <div id="demVote2004"></div>
-                                    <!-- <div class="bar bar-10 stat-1" style="height: 44%;">
-                                        <span>3520</span>
-                                    </div>
-                                    <div class="bar bar-11 stat-2" style="height: 64%;">
-                                        <span>5120</span>
-                                    </div>
-                                    <div class="bar bar-12 stat-3" style="height: 59%">
-                                        <span>4720</span>
-                                    </div> -->
-                                </div>
-                                <div class="bar-group" id="repVote2008">
-                                    <div id="demVote2008"></div>
-                                    <!-- <div class="bar bar-13 stat-1" style="height: 28%;">
-                                        <span>2240</span>
-                                    </div>
-                                    <div class="bar bar-14 stat-2" style="height: 33%;">
-                                        <span>2640</span>
-                                    </div>
-                                    <div class="bar bar-15 stat-3" style="height: 94%;">
-                                        <span>7520</span>
-                                    </div> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h2 class="section-heading timesNewRomanText">Income Distribution</h2>
-                    <hr class="my-4">
-                </div>
-            </div>
-        </div>
-        <!-- End US Default Bar Graph 2 -->
-        <div class="container">
-            <div class="row">
-                <!-- Start Income Distribution Graph -->
-                <!-- Default graph before searching a city -->
-                <canvas id="myChart" width="400" height="200"></canvas>
-                <!-- Custom city graph -->
-                <canvas id="myChartCustom" width="400" height="200"></canvas>
-                <!-- End Income Distribution Graph -->
-<!--
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box mt-5 mx-auto">
-                        <i class="fas fa-4x fa-gem text-primary mb-3 sr-icon-1"></i>
-                        <h3 class="mb-3">Sturdy Templates</h3>
-                        <p class="text-muted mb-0">Our templates are updated regularly so they don't break.</p>
+        <section id="services">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1 id="politicalGraphHeading" class="section-heading googleFontsNoto">Percentage of Popular
+                            Vote by Political Party</h1>
+                        <hr class="my-4">
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box mt-5 mx-auto">
-                        <i class="fas fa-4x fa-paper-plane text-primary mb-3 sr-icon-2"></i>
-                        <h3 class="mb-3">Ready to Ship</h3>
-                        <p class="text-muted mb-0">You can use this theme as is, or you can make changes!</p>
+            </div>
+            <!-- Start US Default Bar Graph 2 -->
+            <div class="container" id="politicalGraph">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div id="bar-chart">
+                            <div class="graph">
+                                <ul class="x-axis">
+                                    <li><span>1992</span></li>
+                                    <li><span>1996</span></li>
+                                    <li><span>2000</span></li>
+                                    <li><span>2004</span></li>
+                                    <li><span>2008</span></li>
+                                </ul>
+                                <ul class="y-axis">
+                                    <li><span>100%</span></li>
+                                    <li><span>75%</span></li>
+                                    <li><span>50%</span></li>
+                                    <li><span>25%</span></li>
+                                    <li><span>0</span></li>
+                                </ul>
+                                <div class="bars">
+                                    <div class="bar-group" id="repVote1992">
+                                        <div id="demVote1992"></div>
+                                    </div>
+                                    <div class="bar-group" id="repVote1996">
+                                        <div id="demVote1996"></div>
+                                    </div>
+                                    <div class="bar-group" id="repVote2000">
+                                        <div id="demVote2000"></div>
+                                    </div>
+                                    <div class="bar-group" id="repVote2004">
+                                        <div id="demVote2004"></div>
+                                    </div>
+                                    <div class="bar-group" id="repVote2008">
+                                        <div id="demVote2008"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h5 class="text-center googleFontsNoto">Legend</h5>
+                            <p class="text-center" id="legendPoliticalGraph1">
+                                <div class="text-center googleFontsRaleway">Republican Party Vote Percentage</div>
+                                <p>
+                                    <p class="text-center" id="legendPoliticalGraph2">
+                                        <div class="text-center googleFontsRaleway">Democratic Party Vote Percentage</div>
+                                    </p>
+                        </div>
+
+
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box mt-5 mx-auto">
-                        <i class="fas fa-4x fa-code text-primary mb-3 sr-icon-3"></i>
-                        <h3 class="mb-3">Up to Date</h3>
-                        <p class="text-muted mb-0">We update dependencies to keep things fresh.</p>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center" id="legendPoliticalSpacing">
+
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box mt-5 mx-auto">
-                        <i class="fas fa-4x fa-heart text-primary mb-3 sr-icon-4"></i>
-                        <h3 class="mb-3">Made with Love</h3>
-                        <p class="text-muted mb-0">You have to make your websites with love these days!</p>
+            </div>
+
+
+
+            <!-- End US Default Bar Graph 2 -->
+            <div class="container">
+                <h1 class="text-center section-heading googleFontsNoto">Income Distribution</h1>
+                <hr class="my-4">
+                <div class="row">
+                    <!-- Start Income Distribution Graph -->
+                    <!-- Default graph before searching a city -->
+                    <canvas id="myChart" width="400" height="300"></canvas>
+                    <!-- Custom city graph -->
+                    <canvas id="myChartCustom" width="400" height="300"></canvas>
+                    <!-- End Income Distribution Graph -->
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9 mx-auto">
+                        <h1 class="googleFontsNoto text-center">About</h1>
+                        <h4 id="openSourceToolHeading" class="section-heading text-white googleFontsRaleway text-center">Open-Source
+                            Tool for Analyzing American Political, Economic, and Social Characteristics</h4>
+                        <hr class="light my-4">
+                        <p class="text-faded mb-4">This application uses data from a unique, previously unutilized
+                            dataset collected by the United States Census Bureau in July 2009. While the bureau does
+                            offer some tools for exploring their collected statistics, their tools are
+                            often dated, limited in functionality, and closed source (or proprietary software).
+                            <br><br>
+                            The goal of my open-source government data project is to make public data easier to
+                            navigate by providing modern visualizations, a thoughtful assortment of public resources,
+                            and organized, transparent downloadable data. Researchers and businesses have routinely
+                            leveraged public data to reach new social insights and make smarter business decisions; I
+                            hope to help these groups by creating a superior tool for analyzing all kinds of American
+                            characteristics.
+                            <br><br>
+                            The data that powers this app can be found in on the US Census Bureau's website in its raw
+                            form <a href="https://www.census.gov/support/USACdataDownloads.html">here.</a> But I do
+                            provide a more intuitively organized version of the data in a single file available to
+                            download with the button below.
+                        </p>
+
+                        <a class="btn btn-light btn-xl js-scroll-trigger googleFontsRaleway text-center" href="../data/US-Census-Data-Master-File.xlsx">Download
+                            Data Spreadsheet</a>
                     </div>
-                </div>-->
-            </div>
-        </div>
-    </section>
-
-    <section class="p-0" id="portfolio">
-        <div class="container-fluid p-0">
-            <div class="row no-gutters no">
-                <div class="col-lg-4 col-sm-6">
-                    <a class="portfolio-box" href="https://www.census.gov/quickfacts/fact/table/losangelescountycalifornia/PST045217"
-                        target="_blank">
-                        <img class="img-fluid" src="../bootstrap/img/portfolio/thumbnails/1.jpg" alt="">
-                            <div class="portfolio-box-caption background-white">
-                            <div class="portfolio-box-caption-content">
-                                <div id="timezoneLA" class="project-category text-faded">
-                                    12:00:00 pm
-                                </div>
-                                <div class="project-name">
-                                    <!-- right here ro tip press ctrl+/ to comment-->
-                                    Los Angeles
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="https://www.census.gov/quickfacts/ny" target="_blank">
-                        <img class="img-fluid" src="../bootstrap/img/portfolio/thumbnails/2.jpg" alt="">
-                            <div class="portfolio-box-caption background-white">
-                            <div class="portfolio-box-caption-content">
-                                <div id="timezoneNY" class="project-category text-faded">
-                                12:00:00 pm
-                                </div>
-                                <div class="project-name">
-                                    New York
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a class="portfolio-box" href="https://www.census.gov/quickfacts/chicagocityillinois" target="_blank">
-                        <img class="img-fluid" src="../bootstrap/img/portfolio/thumbnails/3.jpg" alt="">
-                            <div class="portfolio-box-caption background-white">
-                                <div class="portfolio-box-caption-content">
-                                <div id = "timezoneChicago" class="project-category text-faded">
-                                    12:00:00 pm
-                                </div>
-                                <div class="project-name">
-                                    Chicago
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a class="portfolio-box" href="https://www.census.gov/quickfacts/fact/table/seattlecitywashington,US/PST045217" target="_blank">
-                        <img class="img-fluid" src="../bootstrap/img/portfolio/thumbnails/4.jpg" alt="">
-                    <div class="portfolio-box-caption background-white">
-                            <div class="portfolio-box-caption-content">
-                                <div id = "timezoneSea" class="project-category text-faded">
-                                    12:00:00 pm
-                                </div>
-                                <div class="project-name">
-                                    Seattle
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <!-- commenting this to keep it for later -->
-                    <!-- <a class="portfolio-box" href="../bootstrap/img/portfolio/fullsize/5.jpg"> -->
-                    <a class="portfolio-box" href="https://www.census.gov/quickfacts/fact/table/santamonicacitycalifornia,US/PST045217" target="_blank">
-                        <img class="img-fluid" src="../bootstrap/img/portfolio/thumbnails/5.jpg" alt="" />
-
-                    <div class="portfolio-box-caption background-white">
-                        <div class="portfolio-box-caption-content">
-                            <div id="timezoneSanta" class="project-category text-faded">
-                                12:00:00 pm
-                            </div>
-                            <div class="project-name">
-                                Santa Monica
-                            </div>
-                        </div>
-                    </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="https://www.census.gov/quickfacts/bostoncitymassachusetts" target="_blank">
-                        <img class="img-fluid" src="../bootstrap/img/portfolio/thumbnails/6.jpg" alt="">
-                            <div class="portfolio-box-caption background-white">
-                            <div class="portfolio-box-caption-content">
-                                <div class id="timezoneBost" ="project-category text-faded">
-                                    12:00:00 pm
-                                </div>
-                                <div class="project-name">
-                                    Boston
-                                </div>
-                            </div>
-                        </div>
-                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-
-
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto text-center">
-                    <h2 class="section-heading">Want more information?</h2>
-                    <hr class="my-4">
-                    <p class="mb-5">Contact the Official US Census Bureau Below</p>
-                </div>
+        <!-- Footer -->
+        <footer class="bg-light py-5">
+            <div class="container">
+                <div class="small text-center text-muted">This software tool was created by Matthew Bogard, Tyrell Bopp, and Amanda Thi Aslkjfa</div>
+                <div class="small text-center text-muted">Copyright &copy; 2018-Present</div>
             </div>
-            <div class="row">
-                <div class="col-lg-4 ml-auto text-center">
-                    <i class="fas fa-phone fa-3x mb-3 sr-contact-1"></i>
-                    <p>1-800-123-4567</p>
-                </div>
-                <div class="col-lg-4 mr-auto text-center">
-                    <i class="fas fa-envelope fa-3x mb-3 sr-contact-2"></i>
-                    <p>
-                        <a href="mailto:your-email@your-domain.com">USCensusBureau@gmail.com</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- OLD Search Bar ... -->
-    <!-- <div class="row">
-        <div class="search">
-            <form class="search" method="POST">
-                <input type="text" id="city-search" placeholder="Search Any American City">
-                <button id="search-btn">
-                    <div class="icon"></div>
-                </button>
-            </form>
-        </div>
-    </div> -->
+        </footer>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="../bootstrap/vendor/jquery/jquery.min.js"></script>
-    <script src="../bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script src="../bootstrap/vendor/jquery/jquery.min.js"></script>
+        <script src="../bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Plugin JavaScript -->
-    <script src="../bootstrap/vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="../bootstrap/vendor/scrollreveal/scrollreveal.min.js"></script>
-    <script src="../bootstrap/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <!-- Plugin JavaScript -->
+        <script src="../bootstrap/vendor/jquery-easing/jquery.easing.min.js"></script>
+        <script src="../bootstrap/vendor/scrollreveal/scrollreveal.min.js"></script>
+        <script src="../bootstrap/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
-    <!-- CDN for Chart.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js" type="text/javascript"></script>
-    <script src="../js/app.js" type="text/javascript"></script>
+        <!-- CDN for Chart.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js" type="text/javascript"></script>
+        <script src="../js/app.js" type="text/javascript"></script>
 
-    <!-- Custom scripts for this template -->
-    <script src="../bootstrap/js/creative.min.js"></script>
+        <!-- Custom scripts for this template -->
+        <script src="../bootstrap/js/creative.min.js"></script>
 
-    <!-- Custom script to handle search event to API  -->
-    <script src="../js/API-event-handling.js" type="text/javascript"></script>
-    <script src="../js/google.js" type="text/javascript"></script>
+        <!-- Custom script to handle search event to API  -->
+        <script src="../js/API-event-handling.js" type="text/javascript"></script>
+        <script src="../js/autocomplete.js" type="text/javascript"></script>
+        <script src="../js/google.js" type="text/javascript"></script>
 </body>
 
 </html>
