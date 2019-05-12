@@ -14,7 +14,7 @@ $("#search-btn").on("click", function () {
   // Showing the search results after autocomplete is no longer needed
   $("#firstGraphicalSection").show();
   $("#myChartCustom").show();
-  $("div#mobileHideForAutocomplete").removeAttr('id');
+  $("#mobileHideForAutocomplete").removeAttr('id');
   $("#mobileOnly").remove();
 
   // Saves the search value from the city-search bar into a variable.
