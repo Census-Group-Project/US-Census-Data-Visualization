@@ -14,7 +14,7 @@ $("#search-btn").on("click", function () {
   // Showing the search results after autocomplete is no longer needed
   $("#firstGraphicalSection").show();
   $("#myChartCustom").show();
-  $("div#mobileHideForAutocomplete").removeAttr('id');
+  $("#mobileHideForAutocomplete").removeAttr('id');
   $("#mobileOnly").remove();
 
   // Saves the search value from the city-search bar into a variable.
@@ -715,8 +715,8 @@ var myChart = new Chart(ctx, {
   data: {
       labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
       datasets: [{
-          label: '# of Votes',
-          data: [12, 18, 3, 5, 2, 3],
+          label: 'Use the Search Bar to load custom data into this graph',
+          data: [],
           backgroundColor: [
               'rgba(255, 99, 132, 0.2)',
               'rgba(54, 162, 235, 0.2)',
