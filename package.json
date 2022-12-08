@@ -4,9 +4,9 @@
   "description": "This web app allows users to search for any American city and view a data visualization of that city's demographics based on statistics from the United States Census Bureau.",
   "main": "server.js",
   "dependencies": {
-    "body-parser": "^1.18.3",
+    "body-parser": "^1.20.1",
     "dotenv": "^6.0.0",
-    "express": "^4.16.3",
+    "express": "^4.18.2",
     "mysql": "^2.16.0",
     "mysql2": "^1.6.1",
     "path": "^0.12.7",
